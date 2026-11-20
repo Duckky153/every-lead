@@ -1,4 +1,4 @@
-// Every Lead: sorts one day of made-up leads into Go now, Check first and Fix first.
+// Every Lead: sorts one day of made-up leads into Go now, Fix first and Check first.
 // One step uses a model: Jev's saved answers about what each person wrote. Everything that decides is plain code,
 // in five named steps: arrived, checks, lane, message, handoff. The same data always gives the same result.
 // Works in the browser (as a module) and in Node (for the tests).
@@ -11,19 +11,35 @@
 const OWNER_WAITING = {
   "Ask the customer": "the customer",
   "Licensed person": "a licensed agent",
-  "Teammate can fix": "a teammate (no customer needed)",
+  "Teammate can fix": "a teammate. The customer doesn't need to do anything",
   "A person reads it": "a person",
 };
 
 // How owner names read on the page.
 const OWNER_LABEL = {
-  "Teammate can fix": "Teammate (no customer needed)",
-  "Ask the customer": "Customer, by message",
-  "Licensed person": "Licensed agent",
+  "Teammate can fix": "A teammate",
+  "Ask the customer": "The customer, by message",
+  "Licensed person": "A licensed agent",
 };
 export function ownerLabel(o) {
   return OWNER_LABEL[o] || o;
 }
+
+// Who a lead is waiting on, in a few words (the panel's top line and the Steps list).
+const OWNER_SHORT = {
+  "Ask the customer": "waiting on the customer",
+  "Licensed person": "waiting on a licensed agent",
+  "Teammate can fix": "waiting on a teammate",
+  "A person reads it": "a person reads it first",
+};
+export function waitingShort(owner, held = false) {
+  if (held) return "waiting for the customer to write again";
+  return OWNER_SHORT[owner] || "waiting on a person";
+}
+
+// The seven questions, as the Steps list names them.
+const Q_SHORT = { what_business: "what the business does", who_is_writing: "who wrote it", asks_coverage_question: "a coverage question",
+  timing: "when they need it", employees_in_text: "the headcount", spam_or_test: "spam", instructions_in_text: "orders to a computer" };
 
 const CODE_CHECKS = new Set(["phone_broken", "no_working_contact", "duplicate"]);
 const FIRST_CALL = new Set(["headcount_mismatch", "industry_mismatch", "vague_business", "not_decision_maker", "coverage_question"]);
@@ -198,6 +214,8 @@ function makeFlag(config, check, lead, values, extra = {}) {
 }
 
 const num = (a) => (a ? a.number.toFixed(2) : "");
+// The same number as a whole percent, for the page: confidence for a pick-one answer, chance of yes for a yes/no one.
+const pct = (a) => (a ? String(Math.round(a.number * 100)) : "");
 const validName = (s) => /[A-Za-z]{2,}/.test(String(s || ""));
 
 // Every check on one lead. `fixes` holds what a visitor filled in (in their own browser only).
@@ -253,7 +271,7 @@ export function runChecks(config, lead, earlier, read, fixes = {}) {
           const [lo, hi] = r.employee_buckets[b];
           if (L.employees < lo || L.employees > hi) {
             const names = { owner_only: "just the owner", "2_to_10": "2 to 10 people", "11_to_50": "11 to 50 people", over_50: "over 50 people" };
-            flag = makeFlag(config, check, L, { employees: L.employees, bucket_name: names[b], answer_number: num(a) }, { hit: ["employees"] });
+            flag = makeFlag(config, check, L, { employees: L.employees, bucket_name: names[b], answer_number: num(a), pct: pct(a) }, { hit: ["employees"] });
           }
         }
         break;
@@ -262,30 +280,30 @@ export function runChecks(config, lead, earlier, read, fixes = {}) {
         const g = a.use;
         const picked = r.industry_group[L.industry_picked];
         if (g in r.group_names && !["cannot_tell", "personal_not_business", "unsure"].includes(g) && g !== formGroup && !licensedConfirmed) {
-          flag = makeFlag(config, check, L, { industry_picked: L.industry_picked, form_group: r.group_names[formGroup], read_group: r.group_names[g], answer_number: num(a) }, { hit: ["industry_picked"] });
+          flag = makeFlag(config, check, L, { industry_picked: L.industry_picked, form_group: r.group_names[formGroup], read_group: r.group_names[g], answer_number: num(a), pct: pct(a) }, { hit: ["industry_picked"] });
         } else if (!licensedConfirmed && fixes.business_described && fixes.business_described !== picked) {
           // The customer's own answer disagrees with the type they picked: a licensed agent confirms it.
           flag = makeFlag(config, check, L, {}, { hit: ["industry_picked"],
-            wrong: `They picked ${L.industry_picked}, which is ${r.group_names[picked]}, but say the business does ${r.group_names[fixes.business_described]}.` });
+            wrong: `They picked "${L.industry_picked}" on the form, but say the business does ${r.group_names[fixes.business_described]}.` });
         }
         break;
       }
       case "answer_is":
-        if (a.use === check.answer && !fixes.business_described) flag = makeFlag(config, check, L, { answer_number: num(a) });
+        if (a.use === check.answer && !fixes.business_described) flag = makeFlag(config, check, L, { answer_number: num(a), pct: pct(a) });
         break;
       case "answer_in":
         if (check.answers.includes(a.use) && !validName(fixes.decision_maker)) {
-          flag = makeFlag(config, check, L, { who_name: a.use === "someone_outside" ? "someone outside the business" : "a staff member writing for someone else", answer_number: num(a) });
+          flag = makeFlag(config, check, L, { who_name: a.use === "someone_outside" ? "someone outside the business" : "a staff member writing for someone else", answer_number: num(a), pct: pct(a) });
         }
         break;
       case "yes_or_unsure":
         if (a.use === "yes" && !(check.id === "coverage_question" && validName(fixes.coverage_replied_by))) {
-          flag = makeFlag(config, check, L, { yes_word: a.unsure ? "unsure" : "yes", answer_number: num(a) }, { unsure: a.unsure,
-            wrong: a.unsure ? fill(config.wording.checks[check.id].wrong_unsure, { answer_number: num(a) }) : null });
+          flag = makeFlag(config, check, L, { yes_word: a.unsure ? "unsure" : "yes", answer_number: num(a), pct: pct(a) }, { unsure: a.unsure,
+            wrong: a.unsure ? fill(config.wording.checks[check.id].wrong_unsure, { answer_number: num(a), pct: pct(a) }) : null });
         }
         break;
       case "yes":
-        if (a.status === "yes") flag = makeFlag(config, check, L, { answer_number: num(a) });
+        if (a.status === "yes") flag = makeFlag(config, check, L, { answer_number: num(a), pct: pct(a) });
         break;
       default:
         throw new Error(`Unknown check kind: ${check.kind}`);
@@ -302,8 +320,8 @@ export function runChecks(config, lead, earlier, read, fixes = {}) {
   const po = Object.fromEntries(config.checks.person_only.map((c) => [c.id, c]));
   if (read.error) flags.push(makeFlag(config, { ...po.jev_error, found_by: "jev" }, L, {}, { unsure: true }));
   else if (isSpam) { /* a person reads it; no content reasons */ }
-  else if (A.what_business.use === "personal_not_business") flags.push(makeFlag(config, { ...po.personal_not_business, found_by: "jev" }, L, { answer_number: num(A.what_business) }));
-  else if (A.what_business.use === "unsure" && !fixes.business_described && !licensedConfirmed) flags.push(makeFlag(config, { ...po.business_unsure, found_by: "jev" }, L, { answer_number: num(A.what_business) }, { unsure: true }));
+  else if (A.what_business.use === "personal_not_business") flags.push(makeFlag(config, { ...po.personal_not_business, found_by: "jev" }, L, { answer_number: num(A.what_business), pct: pct(A.what_business) }));
+  else if (A.what_business.use === "unsure" && !fixes.business_described && !licensedConfirmed) flags.push(makeFlag(config, { ...po.business_unsure, found_by: "jev" }, L, { answer_number: num(A.what_business), pct: pct(A.what_business) }, { unsure: true }));
   return { lead: L, flags, passed };
 }
 
@@ -371,20 +389,24 @@ function nextSteps(config, lead, read, u, flags) {
 
 // ---------- step "handoff" and the Steps list ----------
 
+// "your best phone number" as a teammate would say it about the customer: "their best phone number".
+const toThem = (t) => t.replace(/\byou\b/g, "them").replace(/\byour\b/g, "their");
+
 function buildCard(config, lane, owner, flags, passed, message) {
   if (lane === "go_now") return null;
   const held = flags.some((f) => f.held);
   const waiting = held ? "the customer to write again" : OWNER_WAITING[owner] || "a person";
   const personQ = flags.find((f) => f.person_question && lane === "check_first");
-  const lines = [...new Set(flags.map((f) => f.rerun).filter(Boolean))].join(" ");
+  // What happens when the answer comes back: one complete sentence per lead.
+  const lines = [...new Set(flags.map((f) => f.rerun).filter(Boolean))];
   return {
     waiting_for: waiting,
     wrong: flags.map((f) => f.wrong),
-    fixes: [...new Set(flags.map((f) => (lane === "fix_first" && FIRST_CALL.has(f.check) && f.ask ? `Ask ${f.ask.replace(/\byou\b/g, "them").replace(/\byour\b/g, "their")} in the message.` : f.fix)))],
+    fixes: [...new Set(flags.map((f) => (lane === "fix_first" && FIRST_CALL.has(f.check) && f.ask ? `In the message, ask ${toThem(f.ask)}.` : f.fix)))],
     done: passed,
     when_back: lane === "check_first"
       ? (personQ ? personQ.person_question : "A person reads the note and decides the next step.")
-      : (/closes only/.test(lines) ? lines : `${lines} The flag closes only if the check passes.`).trim(),
+      : lines.length > 1 ? "Each answer is checked again when it comes in." : lines[0] || "It's checked again when the answer comes in.",
     also_person: lane === "fix_first" && flags.some((f) => f.unsure),
     message,
     held,
@@ -394,27 +416,28 @@ function buildCard(config, lane, owner, flags, passed, message) {
 function stepsList(config, lead, read, meta, lane, owner, flags, message, card, rank, closed, firstCall) {
   const SRC = { web_form: "web form", phone_call: "phone call", website_chat: "website chat", partner_email: "partner email" };
   const out = [{ text: `Arrived ${lead.came_in} (made-up clock), ${SRC[lead.source] || lead.source}`, label: "CODE" }];
-  const when = meta && meta.read_on ? `read ${meta.read_on}${meta.tokens ? `, ${meta.tokens} tokens` : ""}` : "saved answers";
+  const when = meta && meta.read_on ? `read ${meta.read_on}` : "saved answers";
   if (read.error) out.push({ text: `Jev did not read it (${when})`, label: "MODEL" });
   else {
-    const unsure = Object.entries(read.answers).filter(([, a]) => a.unsure).map(([q]) => q.replaceAll("_", " "));
-    out.push({ text: `Jev read it: 7 answers, ${unsure.length ? `unsure on ${joinList(unsure)}` : "none unsure"} (${when})`, label: "MODEL" });
+    const n = Object.keys(read.answers).length;
+    const unsure = Object.entries(read.answers).filter(([, a]) => a.unsure).map(([q]) => Q_SHORT[q] || q.replaceAll("_", " "));
+    out.push({ text: `Jev answered ${n} questions; ${unsure.length ? `not sure on ${joinList(unsure)}` : "sure on all of them"} (${when})`, label: "MODEL" });
   }
   out.push({ text: flags.length ? `Checks: ${joinList(flags.map((f) => f.row.toLowerCase()))}` : "Checks: all passed", label: "CODE" });
   const laneName = (config.wording.lanes[lane] || {}).name;
   if (lane === "go_now") {
-    out.push({ text: `Go now, number ${rank}. Owner: ${ownerLabel(owner)}`, label: "CODE" });
-    out.push({ text: firstCall.length ? `First-call steps written, with ${firstCall.length === 1 ? "one question" : `${firstCall.length} questions`} the call can settle` : "First-call steps written", label: "CODE" });
+    out.push({ text: `Sorted into Go now, number ${rank} in the call order`, label: "CODE" });
+    out.push({ text: firstCall.length ? `Call notes written, with ${firstCall.length === 1 ? "one question" : `${firstCall.length} questions`} for the first call` : "Call notes written", label: "CODE" });
     out.push({ text: "Next: the first call (licensed agent)", label: "NEXT" });
   } else if (lane === "merged") {
     out.push({ text: `Merged into ${card.merged_into}, so the business gets one call`, label: "CODE" });
     out.push({ text: "Next: nothing here; the first lead carries both notes", label: "NEXT" });
   } else {
-    out.push({ text: `${laneName}. Owner: ${ownerLabel(owner)}`, label: "CODE" });
-    if (message) out.push({ text: `Message ready: ${message.channel} asking for ${joinList(message.items)}. Not sent.`, label: "CODE" });
-    out.push({ text: "Handoff card written", label: "CODE" });
+    out.push({ text: lane === "check_first" ? `Sorted into ${laneName} for a person to read` : `Sorted into ${laneName}, ${waitingShort(owner, card && card.held)}`, label: "CODE" });
+    if (message) out.push({ text: `Message drafted (not sent): ${message.channel === "email" ? "an email" : "a text message"} asking for ${toThem(joinList(message.items))}`, label: "CODE" });
+    out.push({ text: "The fix written down", label: "CODE" });
     if (closed) out.push({ text: `Closed by ${closed.by}, ${closed.date}: "${closed.reason}"`, label: "PERSON" });
-    else out.push({ text: `Next: waiting for ${card.waiting_for}`, label: "NEXT" });
+    else out.push({ text: `Next: waiting for ${card.waiting_for.split(".")[0]}`, label: "NEXT" });
   }
   return out;
 }

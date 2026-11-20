@@ -1,0 +1,88 @@
+/* The two animated figures. Each has two layouts on a fixed stage that is scaled to fit its box: a wide 960 x 540
+   stage (16:9) and, below 600 px, a tall 400 px stage laid out again for a phone. The type sizes below are stage
+   sizes; on a phone the tall stage is shown at about 85 %, so its text stays at 12 px or more on screen. */
+.mfig-box { position: relative; width: 100%; overflow: hidden; border-radius: 18px; border: 1px solid #e7dfd3; background: #fbf8f3; }
+.mfig { position: absolute; left: 0; top: 0; width: 960px; height: 540px; transform-origin: 0 0; font-family: var(--sans); color: #1d3a47; }
+.mfig * { box-sizing: border-box; }
+.mfig .abs { position: absolute; }
+.mfig .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7d84; }
+.mfig .serif { font-family: "Playfair Display", Georgia, serif; }
+
+/* clock */
+.mf-clock { white-space: nowrap; line-height: 1; }
+.mf-clock .t { font-size: 46px; }
+.mf-clock .ap { font-size: 15px; margin-left: 4px; color: #6b7d84; font-family: var(--sans); }
+
+/* cards */
+.mf-card { background: #fff; border: 1px solid #e3dbcf; border-radius: 16px; box-shadow: 0 10px 30px rgba(29, 58, 71, 0.07); }
+.mf-lead { width: 460px; padding: 20px 26px; }
+.mf-lead .mf-top { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.mf-lead .name { font-size: 27px; font-weight: 600; margin-bottom: 8px; }
+.mf-lead .note { font-size: 17px; line-height: 1.45; color: #5a7179; }
+.mf-lead .mf-row { display: flex; align-items: center; gap: 14px; margin-top: 16px; padding-top: 14px; border-top: 1px solid #eee6da; }
+.mf-lead .mf-row .val { font-size: 21px; font-weight: 600; white-space: nowrap; }
+.mf-pill { font-family: ui-monospace, Menlo, monospace; font-size: 13px; letter-spacing: 0.04em; padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+.mf-pill.bad { color: #c23b33; background: #fdeeec; border: 1px solid #f0b5ae; }
+.mf-pill.good { color: #2f7d57; background: #eaf6ef; border: 1px solid #a6d3ba; }
+.mf-reads { width: 380px; padding: 18px 22px; }
+.mf-reads .head { margin-bottom: 10px; }
+.mf-reads .r { display: flex; justify-content: space-between; gap: 12px; font-size: 16px; padding: 6px 0; border-top: 1px solid #f0e9df; }
+.mf-reads .r:first-of-type { border-top: 0; }
+.mf-reads .r b { font-weight: 600; }
+.mf-reads .r span { color: #5a7179; }
+.mf-msg { width: 380px; padding: 18px 22px; border: 2px dashed #eba7a0; box-shadow: none; }
+.mf-msg .head { margin-bottom: 8px; }
+.mf-msg p { margin: 0; font-size: 18px; line-height: 1.45; }
+.mf-lane { white-space: nowrap; font-size: 15px; padding: 8px 16px; }
+
+/* timeline */
+.mf-tl { left: 48px; right: 48px; bottom: 22px; height: 92px; }
+.mf-tl .line { position: absolute; left: 0; right: 0; bottom: 22px; height: 0; border-top: 1.5px dashed #d6cdc1; }
+.mf-tl .fill { position: absolute; left: 0; bottom: 22px; height: 0; border-top: 1.5px solid #9d9286; }
+.mf-tl .tick { position: absolute; bottom: 18px; width: 1.5px; height: 9px; background: #d6cdc1; }
+.mf-tl .dot { position: absolute; bottom: 17px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #c23b33; }
+.mf-tl .lab { position: absolute; bottom: 38px; transform: translateX(-50%); text-align: center; white-space: nowrap; }
+.mf-tl .lab .mono { color: #c23b33; font-size: 13px; display: block; margin-bottom: 3px; }
+.mf-tl .lab b { font-size: 16px; font-weight: 600; display: block; }
+.mf-tl .lab small { font-size: 14px; color: #6b7d84; }
+.mf-tl .end { position: absolute; bottom: 0; font-size: 13px; }
+
+/* sort figure */
+.mf-lanebox { background: #f2ece3; border-radius: 16px; }
+.mf-laneband { height: 124px; background: #f2ece3; border-radius: 16px 16px 0 0; }
+.mf-lanebox .ln, .mf-laneband .ln { position: absolute; left: 20px; top: 16px; font-size: 18px; font-weight: 600; }
+.mf-lanebox .num, .mf-laneband .num { position: absolute; left: 20px; top: 46px; font-size: 44px; line-height: 1; }
+.mf-lanebox .sub, .mf-laneband .sub { position: absolute; left: 20px; top: 98px; font-size: 14px; color: #6b7d84; white-space: nowrap; }
+.mfig .num.mf-go { color: #2f7d57; }
+.mfig .num.mf-fix { color: #c23b33; }
+.mfig .num.mf-chk { color: #1d3a47; }
+.mf-dot { position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; border: 2px solid #9d9286; background: #fff; }
+.mf-dot.mf-go { border-color: #2f7d57; background: #eaf6ef; }
+.mf-dot.mf-fix { border-color: #c23b33; background: #fdeeec; }
+.mf-dot.mf-chk { border-color: #1d3a47; background: #e6ecef; }
+.mf-dot.q::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #2f7d57; }
+.mf-inlet { top: 118px; height: 0; border-top: 1.5px dashed #d6cdc1; }
+.mf-chan { width: 0; border-left: 1.5px dashed #d6cdc1; }
+.mf-key { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #5a7179; }
+.mf-key .mf-dot { position: relative; margin: 0; }
+
+/* The tall phone layout */
+.mfig.portrait .mf-clock .t { font-size: 34px; }
+.mfig.portrait .mf-clock .ap { font-size: 14px; }
+.mfig.portrait .mf-lead { padding: 16px 18px; }
+.mfig.portrait .mf-lead .name { font-size: 23px; margin-bottom: 6px; }
+.mfig.portrait .mf-lead .note { font-size: 16px; }
+.mfig.portrait .mf-lead .mf-row { gap: 10px; margin-top: 14px; padding-top: 12px; }
+.mfig.portrait .mf-lead .mf-row .val { font-size: 19px; }
+.mfig.portrait .mf-pill { font-size: 14px; padding: 5px 10px; }
+.mfig.portrait .mf-reads { padding: 16px 18px; }
+.mfig.portrait .mf-reads .r { font-size: 16px; padding: 5px 0; }
+.mfig.portrait .mf-msg { padding: 16px 18px; }
+.mfig.portrait .mf-msg p { font-size: 17px; }
+.mfig.portrait .mf-lane { font-size: 15px; padding: 8px 14px; }
+.mfig.portrait .mf-tl { left: 20px; right: 20px; bottom: 18px; height: 100px; }
+.mfig.portrait .mf-tl .lab { transform: translateX(-12px); text-align: left; }
+.mfig.portrait .mf-lanebox .ln { left: 18px; top: 14px; font-size: 19px; }
+.mfig.portrait .mf-lanebox .num { left: auto; right: 18px; top: 12px; font-size: 38px; }
+.mfig.portrait .mf-lanebox .sub { left: 18px; top: 44px; font-size: 15px; }
+.mfig.portrait .mf-key { font-size: 15px; }

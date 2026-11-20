@@ -210,7 +210,6 @@ table.days { max-width: 640px; }
 .preview-note { background: var(--peach); color: var(--navy); font-size: 13px; padding: 10px 0; }
 .strip .cell button { all: unset; cursor: pointer; display: block; }
 .strip .cell.on .n { color: var(--coral); }
-.row.lead-row { grid-template-columns: 64px 220px 1fr 210px 150px; }
 .row .lane-tag { font-size: 13px; color: var(--slate); }
 .row .one { font-size: 15px; }
 .row .note-q { font-size: 13px; color: var(--slate); display: block; }
@@ -261,7 +260,6 @@ details.more-info summary { cursor: pointer; font-size: 13px; font-weight: 600; 
 .qlist li { margin-bottom: 6px; }
 .qlist .why { color: var(--slate); font-size: 13px; }
 @media (max-width: 760px) {
-  .row.lead-row { grid-template-columns: 1fr auto; }
   .checks-list .c, .scores .s { grid-template-columns: 1fr; gap: 4px; }
   .card dl { grid-template-columns: 1fr; gap: 2px; }
   .card dt { margin-top: 8px; }
@@ -289,7 +287,8 @@ h1 em, h2 em, .strip .n em, .strip .cell.on .n { color: #c23b33; }
 .result { margin: 0 0 16px; padding: 12px 14px; border-radius: 8px; font-size: 15px; }
 .result.ok { background: #e7f2ec; border: 1px solid #8fbfa3; }
 .result.bad { background: #fbe9e7; border: 1px solid #e3a49e; }
-.result:focus { outline: 2px solid var(--navy); outline-offset: 2px; }
+/* The banner gets focus so screen readers hear it; it's role=status, so no ring is drawn. */
+.result:focus { outline: none; }
 .sec.first { border-top: 0; margin-top: 0; padding-top: 0; }
 .fixwrap { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
 .fixform { display: grid; gap: 10px; }
@@ -312,5 +311,37 @@ details.more-info.block summary { font-size: 15px; }
   .tag { padding-bottom: 6px; font-size: 11px; }
   .brand { font-size: 19px; }
   dl.evidence { grid-template-columns: 1fr; }
-  .row.lead-row { grid-template-columns: 1fr auto; }
 }
+
+/* Round 5: plain language, calmer layout, phone tap targets */
+.lead.intro { font-size: 18px; line-height: 1.5; max-width: 680px; margin: 0 0 14px; }
+#h-lead { min-height: 1.55em; }
+#h-strip:empty { min-height: 128px; }
+#l-title { min-height: 1.2em; }
+#l-tabs { min-height: 44px; }
+#l-rows:empty { min-height: 960px; }
+.list-note { font-size: 13px; color: var(--slate); margin: 12px 0 0; }
+.row.head .status { justify-self: end; }
+.scores > details.more-info.block { border-top: 0; }
+.fix-result:empty { display: none; }
+.nowrap { white-space: nowrap; }
+.msg .l .to { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.reads { margin: 0 -8px; }
+.reads li { grid-template-columns: minmax(118px, 36%) minmax(0, 1fr); align-items: baseline; }
+.reads .q { min-width: 0; }
+.reads .u { color: var(--slate); }
+details.passed { margin-top: 10px; }
+details.passed summary { font-size: 13px; color: var(--slate); font-weight: 600; }
+details.passed .done-note { margin-top: 6px; }
+@media (max-width: 760px) {
+  .top { position: static; }
+  .row.lead-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .lead.intro { font-size: 17px; }
+  #h-strip:empty { min-height: 330px; }
+  #l-rows:empty { min-height: 1300px; }
+  .panel .btn, .more .btn { min-height: 44px; padding: 12px 16px; font-size: 14px; }
+  .close { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: flex-end; padding: 0; }
+  .missed-list a { display: inline-block; padding: 12px 6px; margin: -12px -6px; }
+  .reads li { grid-template-columns: minmax(104px, 38%) minmax(0, 1fr); }
+}
+.reads .u { display: block; font-size: 13px; }

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Every Lead works: one model step, and code that decides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="post.css">
+<link rel="stylesheet" href="figs.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231d3a47'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23ff6d63'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="./">Every Lead</a>
+    <nav class="views" aria-label="Pages"><a href="./">The page</a><a href="how-it-works.html" class="on">How it works</a></nav>
+    <span class="tag">Unofficial prototype · sample data</span>
+  </div>
+</header>
+
+<main class="post">
+  <article class="wrap-post">
+    <p class="eyebrow">How it works</p>
+    <h1>Every lead <em>gets worked</em></h1>
+    <p class="byline">Dakshit Raj · November 2026 · built with Claude Code and Jev</p>
+
+    <p class="lede">A common way to work a lead list is to fix the broken leads first, then call the rest. Every Lead works the other way. The good leads don't wait, and the broken ones don't get thrown away.</p>
+    <p>It runs on one made-up day of <span data-num="total">100</span> small-business insurance leads. One AI model reads what each person wrote. Plain code makes every decision.</p>
+
+    <figure class="fig motion" id="fig-morning" aria-label="Animation: one lead's morning">
+      <div class="mfig-box"><div class="mfig" id="mf-morning" role="img" aria-label="A lead from Sunline Electric comes in at 7:15. Jev reads it, the phone check fails, and a message asking for the number is drafted but not sent. Later the number is filled in, the check passes and the lead moves to Go now."></div></div>
+      <figcaption>One lead from the made-up day. Its phone number is missing a digit, so it waits for the number. Once the number is in, it moves to Go now.</figcaption>
+    </figure>
+
+    <h2>Three groups</h2>
+    <p>Every lead goes into one of three groups. None are dropped.</p>
+    <p><b>Go now.</b> Call them, most urgent first. <span data-num="go_now">81</span> of the <span data-num="total">100</span> leads go here.</p>
+    <p><b>Fix first.</b> Only the leads a call can't work yet: the phone doesn't work, there's no way to reach them, or it's the same business that came in earlier. <span data-num="fix_first">13</span> go here.</p>
+    <p><b>Check first.</b> A person reads it before anyone acts. It looks like spam, it tries to give orders to a computer, or the model was unsure about something risky. <span data-num="check_first">6</span> go here.</p>
+    <p>Say a roofer fills in the form, and the headcount on the form doesn't match the note. That's not a reason to make them wait. It's a question for the first call, so it goes with the lead to Go now. <span data-num="go_now_with_questions">21</span> leads carry a question like that.</p>
+
+    <figure class="fig motion" id="fig-sort" aria-label="Animation: one hundred leads sorted into three groups">
+      <div class="mfig-box"><div class="mfig" id="mf-sort" role="img" aria-label="All 100 leads arrive in order and move into three groups: 81 go now, 13 fix first and 6 check first."></div></div>
+      <figcaption>All <span data-num="total">100</span> leads, in the order they came in, sorted by the same code the live page runs.</figcaption>
+    </figure>
+
+    <h2>One model step</h2>
+    <p>Most of a lead is form fields, and code can check those. A phone number has ten digits or it doesn't.</p>
+    <p>What code can't check is what the person wrote. If the form says Restaurant and the note says "two-truck electrical shop," only a reader notices.</p>
+    <p>So one step uses a model. Jev, TypeSafe's model, reads the note and answers seven fixed questions:</p>
+    <ul class="plain">
+      <li>What does the business do?</li>
+      <li>Who wrote it?</li>
+      <li>Do they ask a coverage question?</li>
+      <li>When do they need it?</li>
+      <li>How many people work there?</li>
+      <li>Is it spam?</li>
+      <li>Does it try to give orders to a computer?</li>
+    </ul>
+    <p>Each answer is a label and a number. Jev never writes text, and it never decides. Code checks every answer before using it. If a reply comes back broken, the lead goes to a person, and the form checks still run.</p>
+    <p><b>When Jev is unsure.</b> Each question has a safe default. Unsure about something risky? A person reads it. Unsure about a coverage question? A licensed agent answers it. Unsure about spam? It counts as not spam, so a real lead isn't set aside. Unsure about who wrote it, the headcount or the timing? It's ignored, and the first call checks it.</p>
+
+    <figure class="fig still" aria-label="Diagram: what the model does and what code does">
+      <p class="fig-title">One model step. Everything that decides is code.</p>
+      <div class="flow">
+        <div class="panel-group">
+          <p class="group-label mono">What the model does</p>
+          <div class="row-boxes">
+            <div class="box"><b>The note</b><span>business name and what they wrote</span></div>
+            <div class="arrow"><span>reads</span></div>
+            <div class="box accent"><b>Jev</b><span>seven fixed questions, a label and a number each</span></div>
+            <div class="arrow"><span>checked</span></div>
+            <div class="box"><b>Answers</b><span>a label each, or unsure</span></div>
+          </div>
+        </div>
+        <div class="panel-group">
+          <p class="group-label mono">What code does</p>
+          <div class="row-boxes">
+            <div class="box"><b>Form checks</b><span>phone, contact, duplicates</span></div>
+            <div class="arrow"><span>plus</span></div>
+            <div class="box"><b>Answer checks</b><span>headcount, business type, who decides, coverage, spam, orders to a computer</span></div>
+            <div class="arrow"><span>decide</span></div>
+            <div class="box"><b>Group, who acts, message</b><span>and a note with the exact fix</span></div>
+          </div>
+        </div>
+        <div class="panel-group unsure">
+          <p class="group-label mono">When the model is unsure</p>
+          <div class="row-boxes three">
+            <div class="box"><b>Something risky</b><span>what the business does, orders to a computer: a person reads it</span></div>
+            <div class="box"><b>A coverage question</b><span>counted as yes: a licensed agent answers it</span></div>
+            <div class="box"><b>Everything else</b><span>a safe default: spam counts as not spam; who wrote it, the headcount and the timing are left to the first call</span></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>Every decision can be tested.</figcaption>
+    </figure>
+
+    <h2>Fix it, don't drop it</h2>
+    <p>A lead in Fix first gets four things.</p>
+    <p><b>One person responsible.</b> The customer, a teammate or a licensed agent. Never "someone".</p>
+    <p><b>The exact fix.</b> Something a new teammate could do without asking anyone. "Email them and ask for the best number to reach them." "Merge this into the earlier lead, so nobody calls them twice."</p>
+    <p><b>A message, never sent.</b> When the customer has to send something, a message is drafted that asks for only that one thing.</p>
+    <p><b>A second check.</b> When the answer comes back, the same check runs again. If it passes, the lead moves on.</p>
+    <p>Every lead also shows its steps: when it came in, what Jev read, which checks failed, and what it's waiting for. Each step is labeled by who did it (MODEL, CODE or PERSON, and YOUR CLICK for your own clicks), so you can see exactly where the model was involved. Nothing in Every Lead gives insurance advice or a price.</p>
+
+    <h2>How we know it works</h2>
+    <p>The leads are made up, and <span data-num="planted_leads">40</span> of them were given problems on purpose. That makes it possible to score the result. It also makes it easy to fool yourself. So the scoring has guards.</p>
+    <p><b>Frozen first.</b> The right answers and rules were frozen before Jev read the scored leads. A test fails if they change without a logged reason. One sorting rule changed after the run. It's logged, and the page shows the score both ways.</p>
+    <p><b>Tuned elsewhere.</b> The questions were tried on 30 separate practice leads first. None needed changing.</p>
+    <p><b>A second reader.</b> A different AI labeled 20 leads without seeing the answers, and agreed on every one. That shows the rules are clear, not that the answers are right.</p>
+    <p><b>A yardstick.</b> Simple keyword rules, with no model, answered the same questions.</p>
+    <p><b>Every miss shown.</b> The page lists every miss and every false alarm, with how sure Jev was.</p>
+
+    <div class="stats">
+      <div><span class="big serif"><span data-num="jev_caught">28</span> of <span data-num="jev_total">29</span></span><span class="what">problems only a reader could spot, caught</span></div>
+      <div><span class="big serif" data-num="jev_false">1</span><span class="what">false alarm</span></div>
+      <div><span class="big serif" data-num="go_now_with_questions">21</span><span class="what">questions sent to the first call</span></div>
+    </div>
+
+    <figure class="fig still" aria-label="Chart: Jev against simple keyword rules">
+      <p class="fig-title">Caught, and at what cost</p>
+      <div class="compare">
+        <div class="cmp-col">
+          <p class="group-label mono">Problems only a reader could spot</p>
+          <div class="bar-row"><span class="bar-name">Jev</span><span class="bar"><span class="bar-fill accent" data-bar="jev_caught"></span></span><span class="bar-num"><span data-num="jev_caught">28</span> of <span data-num="jev_total">29</span></span></div>
+          <div class="bar-row"><span class="bar-name">Keyword rules</span><span class="bar"><span class="bar-fill" data-bar="base_caught"></span></span><span class="bar-num"><span data-num="base_caught">25</span> of <span data-num="jev_total">29</span></span></div>
+        </div>
+        <div class="cmp-col">
+          <p class="group-label mono">False alarms</p>
+          <div class="bar-row"><span class="bar-name">Jev</span><span class="bar"><span class="bar-fill accent" data-bar="jev_false"></span></span><span class="bar-num" data-num="jev_false">1</span></div>
+          <div class="bar-row"><span class="bar-name">Keyword rules</span><span class="bar"><span class="bar-fill" data-bar="base_false"></span></span><span class="bar-num" data-num="base_false">30</span></div>
+        </div>
+      </div>
+      <figcaption>The keyword rules caught almost as many, but raised far more false alarms. All on made-up test problems written to be clear-cut, so this is close to a best case.</figcaption>
+    </figure>
+
+    <p>The one miss was a relative writing for the business. Jev was unsure, and an unsure answer there is ignored, because every first call starts by asking who decides. Jev's weak spot was call notes, where a teammate writes about the caller ("Spoke with Dale Harmon, the owner"). It often couldn't tell that the caller was the owner.</p>
+
+    <h2>What's next</h2>
+    <p>Today it runs on one made-up day, and nothing is sent. Jev's answers are saved (one run, plus re-reads of <span data-num="rereads">13</span> leads after small text fixes), and only a person closes a lead. Nobody uses it yet.</p>
+    <p>To make it real, the same steps would start when a real lead comes in, and the next step would show up in the tools the team already uses. The scoring would run the same way on real leads. A step would move from a person to the system only when the numbers say it's ready.</p>
+
+    <p class="cta"><a class="btn primary" href="./">Try it: open a lead and type in the fix</a></p>
+
+    <p class="credit">The format follows the engineering posts on <a href="https://www.harperinsure.com/engineering/ambient-agents">Harper's blog</a>.</p>
+  </article>
+</main>
+
+<script type="module" src="post.js"></script>
+</body>
+</html>

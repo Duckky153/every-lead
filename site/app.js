@@ -1,10 +1,12 @@
 // Every Lead page. Loads the made-up day and Jev's saved answers, runs the engine in the browser, draws the page.
-// The page never calls Jev. A visitor's clicks (Fill in the fix, Hold, Merge) stay in their own browser and are labeled.
-import { runDay, perfectAnswers, score, joinList, ownerLabel } from "./engine.js";
+// The page never calls Jev. A visitor's clicks (Save and re-check, Put on hold, Merge) stay in their own browser and are labeled.
+import { runDay, perfectAnswers, score, joinList, ownerLabel, waitingShort } from "./engine.js";
 
 const $ = (s) => document.querySelector(s);
-const LANES = ["go_now", "check_first", "fix_first"];
+// One order everywhere: Go now, Fix first, Check first.
+const LANES = ["go_now", "fix_first", "check_first"];
 const SRC = { web_form: "Web form", phone_call: "Phone call", website_chat: "Website chat", partner_email: "Partner email" };
+const SRC_MANY = { web_form: "Web form", phone_call: "Phone calls", website_chat: "Website chat", partner_email: "Partner email" };
 const UPSTREAM = {
   phone_broken: "have the form check for a full 10-digit number",
   no_working_contact: "require one working phone or email before the form sends",
@@ -13,7 +15,7 @@ const UPSTREAM = {
   industry_mismatch: "show a short description under each business type",
   vague_business: "ask \"What does your business do day to day?\" as its own box",
   not_decision_maker: "ask \"Are you the owner or the person who decides?\"",
-  coverage_question: "send questions to a licensed agent straight away",
+  coverage_question: "send questions to a licensed agent right away",
   spam: "add a simple spam check to the form",
   instructions_to_computer: "keep showing notes as plain text, never as instructions",
 };
@@ -22,7 +24,17 @@ const QNAME = { what_business: "What the business does", who_is_writing: "Who wr
 const USED_BY = { headcount_mismatch: "employees_in_text", industry_mismatch: "what_business", vague_business: "what_business", not_decision_maker: "who_is_writing",
   coverage_question: "asks_coverage_question", spam: "spam_or_test", instructions_to_computer: "instructions_in_text", business_unsure: "what_business", personal_not_business: "what_business" };
 const FIRST_CALL_CHECKS = new Set(["headcount_mismatch", "industry_mismatch", "vague_business", "not_decision_maker", "coverage_question"]);
-const UNSURE_WORD = { person: "a person reads it", treat_as_yes: "counted as yes", treat_as_no: "counted as no", no_flag: "no flag", treat_as_not_stated: "counted as not stated" };
+// What an unsure answer does, in the panel ("ignored" means it raises nothing; the first call or the form covers it).
+const UNSURE_WORD = { person: "a person reads it", treat_as_yes: "counted as yes", treat_as_no: "counted as no", no_flag: "ignored", treat_as_not_stated: "counted as not stated" };
+// Pick-one answers in plain words (what_business uses rules.json group_names).
+const CHOICE_WORD = {
+  who_is_writing: { owner_or_officer: "the owner", staff_sent_by_someone_else: "staff, for the owner", someone_outside: "someone outside the business", cannot_tell: "can't tell" },
+  timing: { right_away: "right away", within_a_month: "within a month", has_policy_renewing_later: "has a policy renewing later", not_stated: "not stated" },
+  employees_in_text: { not_stated: "not stated", owner_only: "just the owner", "2_to_10": "2 to 10 people", "11_to_50": "11 to 50 people", over_50: "over 50 people" },
+};
+// After a miss in Go now, what the first call does about it.
+const MISS_FOLLOW_UP = { not_decision_maker: "the first call asks who decides", headcount_mismatch: "the first call confirms the headcount",
+  coverage_question: "a licensed agent is on the first call", industry_mismatch: "the first call confirms the business type", vague_business: "the first call asks what the business does" };
 
 const state = { tab: "go_now", showAll: false, fixes: {}, clicks: {}, holds: {}, open: null, opener: null, banner: null };
 let D = null;
@@ -45,10 +57,10 @@ function el(tag, attrs = {}, ...kids) {
   return n;
 }
 
-function emph(text) {
-  // "[60] go now" style lines: numbers in bold.
+// Phone numbers never break across two lines (a broken number is often the point of the sentence).
+function noBreak(text) {
   const p = document.createDocumentFragment();
-  text.split(/(\[[^\]]+\])/).forEach((part) => p.append(part.startsWith("[") ? el("b", { text: part.slice(1, -1) }) : part));
+  String(text).split(/(\(\d{3}\) \d{3}-\d{1,4})/).forEach((part, i) => p.append(i % 2 ? el("span", { class: "nowrap", text: part }) : part));
   return p;
 }
 
@@ -64,10 +76,17 @@ function laneCounts(day) {
 
 // ---------- hero ----------
 
+// Every number written into the HTML (data-num) is replaced from the data, so the page can't drift from the run.
+function fillNumbers() {
+  const s = D.baseDay.summary;
+  const nums = { ...s, planted_leads: Object.values(D.problemKey).filter((p) => p.length).length,
+    questions: Object.keys(D.config.questions.questions).length, checks: D.config.checks.checks.length };
+  for (const n of document.querySelectorAll("[data-num]")) if (n.dataset.num in nums) n.textContent = String(nums[n.dataset.num]);
+}
+
 function drawHero() {
   // The hero shows the day as it came in; the leads list below follows a visitor's clicks.
   const s = D.baseDay.summary;
-  $("#h-lead").replaceChildren(emph(`100 made-up leads came in today. [${s.go_now}] go now, [${s.go_now_with_questions}] of them with a question for the first call. [${s.fix_first}] get fixed first and [${s.check_first}] wait for a person. None are dropped.`));
   const lines = D.config.wording.lanes;
   $("#h-strip").replaceChildren(...LANES.map((l) => el("div", { class: `cell${state.tab === l ? " on" : ""}` },
     el("button", { type: "button", onclick: () => { state.tab = l; state.showAll = false; drawAll(); const t = document.querySelector("#l-tabs button.on"); if (t) { t.focus(); t.scrollIntoView({ behavior: "smooth", block: "center" }); } } },
@@ -91,7 +110,7 @@ function nextWord(r) {
   if (r.closed) return "Closed by a person";
   if (r.lane === "merged") return "Merged (your click)";
   if (state.holds[r.id]) return "On hold (your click)";
-  if (r.lane === "go_now") return r.urgent ? "Call first" : "Call";
+  if (r.lane === "go_now") return r.urgent ? "Call (urgent)" : "Call";
   if (r.lane === "check_first") return "Read it";
   if (r.card && r.card.held) return "On hold";
   if (r.flags.some((f) => f.check === "duplicate")) return "Merge";
@@ -111,7 +130,7 @@ function drawLeads() {
   let rows = day.results.filter((r) => r.lane === state.tab);
   if (state.tab === "go_now") rows.sort((a, b) => a.rank - b.rank);
   const limit = state.showAll ? rows.length : 15;
-  const head = el("div", { class: "row lead-row head" }, el("span", { text: "Came in" }), el("span", { text: "Business (sample)" }), el("span", { text: "In one line" }), el("span", { text: "Next" }));
+  const head = el("div", { class: "row lead-row head" }, el("span", { text: "Came in" }), el("span", { text: "Business (sample)" }), el("span", { text: "In one line" }), el("span", { class: "status", text: "Next" }));
   const list = rows.slice(0, limit).map((r) => el("div", { class: "row lead-row", tabindex: "0", role: "button", "data-id": r.id, "aria-label": `${r.lead.business}: ${oneLine(r)}`,
     onclick: () => openPanel(r.id), onkeydown: (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openPanel(r.id); } } },
     el("span", { class: "date", text: r.lead.came_in }),
@@ -119,21 +138,28 @@ function drawLeads() {
     el("span", { class: "what one", text: oneLine(r) }),
     el("span", { class: "status", text: nextWord(r) })));
   const more = rows.length > limit ? el("div", { class: "more" }, el("button", { type: "button", class: "btn ghost", onclick: () => { state.showAll = true; drawLeads(); } }, `Show all ${rows.length}`)) : null;
-  $("#l-rows").replaceChildren(head, ...list, ...(more ? [more] : []));
+  const note = state.tab === "go_now" ? el("p", { class: "list-note", text: "Most urgent first, then in the order they came in." }) : null;
+  $("#l-rows").replaceChildren(...(note ? [note] : []), head, ...list, ...(more ? [more] : []));
   const clicked = Object.keys(state.fixes).length + Object.keys(state.holds).length > 0;
   $("#l-caption").textContent = clicked
-    ? "Click a lead to see what's wrong, the fix and its steps. These counts include your clicks; the numbers at the top are the day as it came in."
-    : "Click a lead to see what's wrong, the fix and its steps.";
+    ? "Click a lead to see its details and next steps. These counts include your clicks; the numbers at the top are the day as it came in."
+    : "Click a lead to see its details and next steps.";
 }
 
 // ---------- the lead panel ----------
 
-function answerText(q, a) {
-  const g = D.config.rules.group_names;
-  if (a.kind === "yes_no") return `${a.status === "unsure" ? "unsure" : a.status} (chance of yes ${a.number.toFixed(2)})`;
-  const label = (v) => (q === "what_business" ? g[v] || v : String(v).replaceAll("_", " "));
-  return a.status === "unsure" ? `unsure, leaning ${label(a.choice)} (confidence ${a.number.toFixed(2)})` : `${label(a.status)} (confidence ${a.number.toFixed(2)})`;
+const pct = (n) => `${Math.round(n * 100)}%`;
+function choiceWord(q, v) {
+  if (q === "what_business") return D.config.rules.group_names[v] || v;
+  return (CHOICE_WORD[q] && CHOICE_WORD[q][v]) || String(v).replaceAll("_", " ");
 }
+function answerText(q, a) {
+  if (a.kind === "yes_no") return `${a.status === "unsure" ? "not sure" : a.status} (${pct(a.number)} chance of yes)`;
+  return a.status === "unsure" ? `not sure, leaning ${choiceWord(q, a.choice)} (${pct(a.number)})` : `${choiceWord(q, a.status)} (${pct(a.number)} sure)`;
+}
+// Check names as they read on the page (checks.json keeps the ids and the locked names).
+const checkWord = (id) => (D.config.wording.check_names || {})[id] || (D.config.checks.checks.find((c) => c.id === id) || {}).name || id;
+const checkWordByName = (name) => { const c = [...D.config.checks.checks, ...D.config.checks.person_only].find((x) => x.name === name); return c ? checkWord(c.id) : name; };
 
 function openPanel(id) {
   if (!state.open && document.activeElement && document.activeElement !== document.body) state.opener = document.activeElement;
@@ -144,7 +170,7 @@ function openPanel(id) {
   const laneName = r.lane === "merged" ? "Merged" : names[r.lane].name;
   const body = [];
   body.push(el("div", { class: "panel-top" },
-    el("div", {}, el("h3", { text: L.business }), el("p", { class: "sub", text: `${L.id} · came in ${L.came_in} · ${SRC[L.source]} · ${laneName}${r.lane === "merged" ? "" : ` · ${ownerLabel(r.owner)}`}` })),
+    el("div", {}, el("h3", { text: L.business }), el("p", { class: "sub", text: `${L.id} · came in ${L.came_in} · ${SRC[L.source]} · ${laneName}${r.lane === "merged" ? "" : ` · ${r.lane === "go_now" ? "a licensed agent calls" : waitingShort(r.owner, r.card && r.card.held)}`}` })),
     el("button", { type: "button", class: "close", onclick: closePanel }, "Close")));
 
   // The result of a visitor's last fix, at the top where they can see it.
@@ -155,9 +181,9 @@ function openPanel(id) {
 
   if (r.lane === "merged") {
     body.push(el("div", { class: "card person" }, el("p", { class: "waiting", text: `Merged into ${r.card.merged_into} (your click).` }),
-      el("p", { class: "done-note", text: `${r.card.merged_into} now carries both notes, so the business gets one call. Nothing is left to do here.` })));
+      el("p", { class: "done-note", text: "Nothing is left to do here." })));
   } else if (r.lane === "go_now") {
-    body.push(el("div", { class: "sec first" }, el("span", { class: "l", text: `Go now, number ${r.rank}: on the first call` }),
+    body.push(el("div", { class: "sec first" }, el("span", { class: "l", text: `Number ${r.rank} in the call order. On the first call:` }),
       el("ol", { class: "qlist" }, ...r.next_steps.slice(0, 3).map((s) => el("li", { text: s }))),
       r.next_steps.length > 3 ? el("details", { class: "more-info" }, el("summary", { text: "More for the call" }), el("ul", { class: "qlist" }, ...r.next_steps.slice(3).map((s) => el("li", { text: s })))) : null,
       r.first_call.length ? el("p", { class: "done-note", text: `Why: ${r.first_call.map((f) => f.wrong).join(" ")}` }) : null));
@@ -174,7 +200,7 @@ function openPanel(id) {
   const reads = r.read.error ? [el("li", {}, el("span", { class: "q", text: "Jev did not read this lead." }))]
     : Object.entries(r.read.answers).map(([q, a]) => el("li", { class: used.has(q) ? "used" : "" },
       el("span", { class: "q", text: QNAME[q] }),
-      el("span", { class: "a" }, answerText(q, a), a.unsure ? el("span", { class: "u", text: ` · ${UNSURE_WORD[D.config.questions.questions[q].unsure]}` }) : null)));
+      el("span", { class: "a" }, answerText(q, a), a.unsure ? el("span", { class: "u", text: `${UNSURE_WORD[D.config.questions.questions[q].unsure]}` }) : null)));
   body.push(el("div", { class: "sec" }, el("span", { class: "l", text: "What Jev read" }), el("ul", { class: "reads" }, ...reads)));
 
   if (r.lane !== "merged") {
@@ -182,7 +208,8 @@ function openPanel(id) {
     for (const f of r.flags) for (const e of f.evidence) if (e.field !== "what_they_wrote" && (e.hit || !ev.has(e.field))) ev.set(e.field, e);
     body.push(el("div", { class: "sec" }, el("span", { class: "l", text: "Checks" }),
       ev.size ? el("dl", { class: "evidence" }, ...[...ev.values()].flatMap((e) => [el("dt", { text: e.label }), el("dd", { class: e.hit ? "hit" : "", text: e.value })])) : null,
-      el("p", { class: "done-note", text: r.passed.length ? `Passed: ${joinList(r.passed.map((p) => p.toLowerCase()))}.` : "No other checks passed." })));
+      r.passed.length ? el("details", { class: "more-info passed" }, el("summary", { text: `Other checks passed (${r.passed.length})` }),
+        el("p", { class: "done-note", text: `${joinList(r.passed.map((p) => checkWordByName(p)))}.` })) : el("p", { class: "done-note", text: "No other checks passed." })));
   }
 
   // After a click: the day as it came in, up to its checks; then the clicks; then what the re-run decided.
@@ -194,8 +221,7 @@ function openPanel(id) {
     steps = before.slice(0, upTo).concat(clicks, r.steps.slice(r.steps.findIndex((s) => s.text.startsWith("Checks:")) + 1));
   }
   body.push(el("div", { class: "sec" }, el("span", { class: "l", text: "Steps" }),
-    el("ul", { class: "steps" }, ...steps.map((s) => el("li", { class: s.label === "NEXT" ? "next" : "" }, el("span", { text: s.text }), el("span", { class: `lab ${s.label.replace(" ", "_")}`, text: s.label })))),
-    el("p", { class: "caption", text: `The code steps ran in your browser just now. Jev's step shows the saved answer${D.runDate ? ` from ${D.runDate}` : ""}; the page never calls Jev.` })));
+    el("ul", { class: "steps" }, ...steps.map((s) => el("li", { class: s.label === "NEXT" ? "next" : "" }, el("span", { text: s.text }), el("span", { class: `lab ${s.label.replace(" ", "_")}`, text: s.label }))))));
 
   $("#panel-body").replaceChildren(...body.filter(Boolean));
   $("#panel").hidden = false; $("#scrim").hidden = false;
@@ -209,14 +235,14 @@ function drawCard(r) {
   const held = state.holds[r.id];
   const parts = [el("p", { class: "waiting", text: held ? `On hold (your click): ${held}` : `Waiting for: ${c.waiting_for}.` }),
     el("dl", {},
-      el("dt", { text: "What's wrong" }), el("dd", {}, ...c.wrong.map((t) => el("p", { text: t }))),
+      el("dt", { text: "What's wrong" }), el("dd", {}, ...c.wrong.map((t) => el("p", {}, noBreak(t)))),
       el("dt", { text: isPerson ? "A person answers" : "The fix" }), el("dd", {}, ...(isPerson ? [el("p", { text: c.when_back })] : c.fixes.map((t) => el("p", { text: t })))))];
-  if (c.also_person) parts.push(el("p", { class: "done-note", text: "Jev was unsure on one answer, so a person also reads this." }));
+  if (c.also_person) parts.push(el("p", { class: "done-note", text: "Jev wasn't sure about one answer, so a person also reads this." }));
   if (!isPerson) parts.push(drawFixForm(r));
   if (c.message) {
     const m = c.message;
     const status = el("span", { class: "state", text: "Nothing is sent." });
-    parts.push(el("div", { class: "msg" }, el("span", { class: "l", text: `Message (${m.channel} to ${m.to})` }), el("p", { text: m.text }),
+    parts.push(el("div", { class: "msg" }, el("span", { class: "l" }, "Message", el("span", { class: "to", text: ` · ${m.channel} to ${m.to}` })), el("p", { text: m.text }),
       el("div", { class: "row-btns" }, el("button", { type: "button", class: "btn", onclick: () => copy(m.text, status) }, "Copy"), status)));
   }
   if (r.closed) parts.push(el("p", { class: "done-note", text: `Closed by ${r.closed.by}, ${r.closed.date}: "${r.closed.reason}"` }));
@@ -253,7 +279,7 @@ function drawFixForm(r) {
   if (checks.has("coverage_question")) add("Licensed agent who answered", el("input", { name: "coverage_replied_by" }));
   const result = el("p", { class: "fix-result", role: "status" });
   if (inputs.length) {
-    form.append(el("div", { class: "actions" }, el("button", { type: "submit", class: "btn primary" }, "Fill in the fix"), ...quick));
+    form.append(el("div", { class: "actions" }, el("button", { type: "submit", class: "btn primary" }, "Save and re-check"), ...quick));
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const f = {};
@@ -270,7 +296,7 @@ function drawFixForm(r) {
   }
   if (r.card && r.card.when_back && !r.card.held) form.append(el("p", { class: "done-note", text: r.card.when_back }));
   form.append(result);
-  wrap.append(form, holdRow(r), el("p", { class: "done-note", text: "Your clicks stay in your browser only." }));
+  wrap.append(form, holdRow(r));
   return wrap;
 }
 
@@ -283,13 +309,13 @@ function holdRow(r) {
       if (!why) return;
       state.holds[r.id] = why;
       (state.clicks[r.id] ||= []).push({ text: `You put it on hold: "${why}"`, label: "YOUR CLICK" });
-      state.banner = { id: r.id, ok: true, title: "On hold.", text: `Reason saved: "${why}". It stays in ${D.config.wording.lanes[r.lane].name} until someone picks it up.` };
+      state.banner = { id: r.id, ok: true, title: "On hold.", text: `It stays in ${D.config.wording.lanes[r.lane].name} until someone picks it up.` };
       drawAll(); openPanel(r.id);
     };
     input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); save(); } });
-    row.replaceChildren(input, el("button", { type: "button", class: "btn", onclick: save }, "Hold"));
+    row.replaceChildren(input, el("button", { type: "button", class: "btn", onclick: save }, "Put on hold"));
     input.focus();
-  } }, "Hold");
+  } }, "Put on hold");
   row.append(start);
   return row;
 }
@@ -301,7 +327,7 @@ function applyFix(r, f, what) {
   const now = D.day.results.find((x) => x.id === r.id);
   const after = new Set(now.flags.map((x) => x.check));
   const closed = before.filter((c) => !after.has(c));
-  const checkName = (c) => `"${D.config.checks.checks.find((x) => x.id === c).name}"`;
+  const checkName = (c) => `"${checkWord(c)}"`;
   const clicks = (state.clicks[r.id] ||= []);
   clicks.push({ text: what, label: "YOUR CLICK" });
   if (now.lane === "merged") {
@@ -309,11 +335,11 @@ function applyFix(r, f, what) {
   } else if (closed.length) {
     clicks.push({ text: `Checks ran again: ${joinList(closed.map(checkName))} ${closed.length > 1 ? "pass" : "passes"}`, label: "CODE" });
     const moved = now.lane === "go_now" ? `Moved to Go now, number ${now.rank}.` : `Still ${D.config.wording.lanes[now.lane].name} for what's left.`;
-    clicks.push({ text: now.lane === "go_now" ? "Flag closed. Moves to Go now" : "Flag closed", label: "CODE" });
+    clicks.push({ text: now.lane === "go_now" ? "Problem cleared. Moves to Go now" : "Problem cleared", label: "CODE" });
     state.banner = { id: r.id, ok: true, title: `${joinList(closed.map(checkName))} ${closed.length > 1 ? "pass" : "passes"} now.`, text: `The check ran again on what you filled in. ${moved}` };
   } else {
     clicks.push({ text: "Checks ran again: still failing", label: "CODE" });
-    state.banner = { id: r.id, ok: false, title: "Still failing.", text: "The check ran again on what you filled in and it doesn't pass yet, so the flag stays open." };
+    state.banner = { id: r.id, ok: false, title: "Still failing.", text: "The check ran again on what you filled in and it doesn't pass yet, so the lead stays where it is." };
   }
   drawAll();
   openPanel(r.id);
@@ -346,47 +372,62 @@ const idLink = (id, text) => el("a", { href: `?lead=${id}`, onclick: (e) => { e.
 
 function drawChecked() {
   const qs = D.config.questions.questions;
+  const plain = D.config.wording.unsure_plain || {};
   $("#k-questions").replaceChildren(...Object.entries(qs).map(([id, q]) => el("li", {}, `${QNAME[id]}. `,
-    el("span", { class: "why", text: `If unsure: ${UNSURE_WORD[q.unsure]}. ${q.unsure_why}` }))));
+    el("span", { class: "why", text: plain[id] || `If unsure: ${UNSURE_WORD[q.unsure]}. ${q.unsure_why}` }))));
+  const ownerCell = (c) => (FIRST_CALL_CHECKS.has(c.id) ? "On the first call"
+    : c.owner_if_note_has_contact ? `${ownerLabel(c.owner_if_note_has_contact)} if the note has a number; otherwise ${ownerLabel(c.owner).replace(/^The /, "the ")}`
+    : ownerLabel(c.owner));
   $("#k-checks").replaceChildren(el("div", { class: "c head" }, el("span", { text: "Check" }), el("span", { text: "Runs on" }), el("span", { text: "Who fixes it" })),
     ...D.config.checks.checks.map((c) => el("div", { class: "c" },
-      el("span", { text: c.name }), el("span", { class: "by", text: c.found_by === "code" ? "The form (plain code)" : "Jev's answer (plain code)" }),
-      el("span", { class: "by", text: FIRST_CALL_CHECKS.has(c.id) ? "Licensed agent on the first call (a message if there's no working phone)" : c.owner_if_note_has_contact ? `${ownerLabel(c.owner_if_note_has_contact)} / ${ownerLabel(c.owner)}` : ownerLabel(c.owner) }))));
+      el("span", { text: checkWord(c.id) }), el("span", { class: "by", text: c.found_by === "code" ? "The form (plain code)" : "Jev's answer (plain code)" }),
+      el("span", { class: "by", text: ownerCell(c) }))));
+  $("#k-checks-note").textContent = "On the first call: a licensed agent settles it on the call, or by message if there's no working phone.";
 
   const s = D.scores;
   const t = s.reading_totals;
-  const g = D.config.rules.group_names;
-  const answerWord = (a) => (a ? `Jev: ${a.answer === "unsure" ? `unsure${a.leaning ? `, leaning ${(g[a.leaning] || a.leaning).replaceAll("_", " ")}` : ""}` : (g[a.answer] || a.answer).replaceAll("_", " ")}, ${a.number.toFixed(2)}` : "no answer");
   const lanes = D.config.wording.lanes;
   const laneName = (l) => (lanes[l] ? lanes[l].name : l);
+  const row = (id) => `"${(D.config.wording.checks[id] || {}).row || id}"`;
+  const jevSaid = (a) => (!a ? "Jev gave no answer"
+    : a.answer === "unsure" ? `Jev wasn't sure (${pct(a.number)})`
+    : `Jev said ${choiceWord(a.question, a.answer)} (${pct(a.number)} sure)`);
   const li = (id, rest) => el("li", {}, idLink(id, id), rest);
   const missedList = s.missed.filter((m) => m.found_by === "jev");
   const b = s.baseline;
+  const readers = s.reading_totals.answers;
+  const nLeads = s.lead_level ? s.lead_level.total : D.leads.length;
+  const nQs = Object.keys(qs).length;
   const rows = [
-    ["Jev-read problems", el("span", {}, el("b", { text: `${s.jev.caught} of ${s.jev.total}` }), " caught",
-      el("small", { text: "Caught means the right check fired on that lead, with the right owner. Jev was never tuned on these 100 leads. With only 29 problems, one miss moves the score a lot." }),
-      missedList.length ? el("ul", { class: "missed-list" }, ...missedList.map((m) => li(m.id, `: ${m.kind.replaceAll("_", " ")} missed (${answerWord(m.jev_answer)}; the lead is in ${laneName(m.lane)})`))) : null)],
+    ["Problems only a reader could spot", el("span", {}, el("b", { text: `${s.jev.caught} of ${s.jev.total}` }), " caught",
+      missedList.length ? el("ul", { class: "missed-list" }, ...missedList.map((m) => li(m.id,
+        `: missed ${row(m.kind)}. ${jevSaid(m.jev_answer)}. The lead is in ${laneName(m.lane)}${m.lane === "go_now" && MISS_FOLLOW_UP[m.kind] ? `, and ${MISS_FOLLOW_UP[m.kind]}` : ""}.`))) : null)],
     ["False alarms", el("span", {}, el("b", { text: String(s.false_alarms.length) }), ` (${s.false_alarms_code} from code, ${s.false_alarms_jev} from Jev)`,
-      s.false_alarms.length ? el("ul", { class: "missed-list" }, ...s.false_alarms.map((f) => li(f.id, `: ${f.check.replaceAll("_", " ")} (lead is in ${laneName(f.lane)})`))) : null)],
-    ["Unsure answers", el("span", {}, el("b", { text: String(s.unsure_extra.length) }), " extra flags came from answers Jev was unsure about",
-      s.unsure_extra.length ? el("ul", { class: "missed-list" }, ...s.unsure_extra.map((x) => li(x.id, `: ${x.check.replaceAll("_", " ")} (lead is in ${laneName(x.lane)})`))) : null,
-      el("small", { text: `Clean leads taken out of Go now only because Jev was unsure: ${s.slowed.length}.` }))],
-    ["Lead by lead", el("span", {}, el("b", { text: `${s.lead_level.same} of ${s.lead_level.total}` }), " leads land in the same lane, with the same owner, as they would with the answer key",
-      b ? ` (simple rules: ${b.lead_level.same}).` : ".",
-      s.lead_level_original_rule ? el("small", { text: `Under the lane rule in use when Jev read the leads, before questions a call can settle moved into Go now: Jev ${s.lead_level_original_rule.jev}, simple rules ${s.lead_level_original_rule.baseline}. The new lanes let more mistakes land harmlessly in Go now, for both.` }) : null,
-      s.lead_level.differ.length ? el("ul", { class: "missed-list" }, ...s.lead_level.differ.map((x) => li(x.id, `: ${laneName(x.got)}, the key says ${laneName(x.want)}`))) : null)],
-    ["Against simple rules", b ? el("span", {}, "Keyword rules plus the form's role box, no model: ", el("b", { text: `${b.jev.caught} of ${b.jev.total}` }), ` caught, with `, el("b", { text: `${b.false_alarms} false alarms` }), ` (Jev: ${s.false_alarms.length}).`,
-      el("small", { text: `Their reading: ${b.reading_totals.right} of 700 answers right (Jev: ${t.right}). The rules were written after seeing the leads, so this flatters them.` })) : el("span", { text: "Not run." })],
+      s.false_alarms.length ? el("ul", { class: "missed-list" }, ...s.false_alarms.map((f) => li(f.id, `: marked ${row(f.check)} by mistake. The lead is in ${laneName(f.lane)}.`))) : null)],
+    ["Against simple rules", b ? el("span", {}, "Simple keyword rules, with no AI: ", el("b", { text: `${b.jev.caught} of ${b.jev.total}` }), " caught, but ",
+      el("b", { text: `${b.false_alarms} false alarms` }), ` (Jev: ${s.false_alarms.length}).`,
+      el("small", { text: `They got ${b.reading_totals.right} of ${readers} answers right (Jev: ${t.right}). The rules were written after seeing the leads, so this comparison favors them.` })) : el("span", { text: "Not run." })],
+    ["Unsure answers", el("span", {}, el("b", { text: String(s.unsure_extra.length) }), " extra problems were raised only because Jev wasn't sure",
+      s.unsure_extra.length ? el("ul", { class: "missed-list" }, ...s.unsure_extra.map((x) => li(x.id, `: raised ${row(x.check)}. The lead is in ${laneName(x.lane)}.`))) : null,
+      el("small", { text: `Clean leads taken out of Go now only because Jev wasn't sure: ${s.slowed.length}.` }))],
+    ["Lead by lead", el("span", {}, el("b", { text: `${s.lead_level.same} of ${s.lead_level.total}` }), " leads end up in the right group with the right person",
+      b ? ` (simple rules: ${b.lead_level.same === s.lead_level.same ? "also " : ""}${b.lead_level.same}).` : ".",
+      s.lead_level_original_rule ? el("small", { text: `The sorting rule changed after Jev's run. Under the old rule it was Jev ${s.lead_level_original_rule.jev}, simple rules ${s.lead_level_original_rule.baseline}. The new rule sends more leads to Go now, where a mistake does little harm.` }) : null,
+      s.lead_level.differ.length ? el("ul", { class: "missed-list" }, ...s.lead_level.differ.map((x) => li(x.id, `: ${laneName(x.got)}; the answer key says ${laneName(x.want)}.`))) : null)],
     ["Code checks", el("span", {}, el("b", { text: `${s.code.caught} of ${s.code.total}` }), " simple problems found", el("small", { text: "Built and tested to catch exactly these, so this is a test, not a score." }))],
-    ["Jev's reading", el("span", {}, el("b", { text: `${t.right} of ${t.answers}` }), ` answers right, ${t.confident_wrong} confident and wrong, ${t.unsure} unsure`,
-      s.reading_totals_locked_key ? el("small", { text: `Against the answer key as it was locked: ${s.reading_totals_locked_key.right} of ${t.answers}. One key was corrected afterwards and is logged.` }) : null,
+    ["Jev's reading", el("span", {}, el("b", { text: `${t.right} of ${t.answers}` }), ` answers right (${nLeads} leads × ${nQs} questions), ${t.confident_wrong} sure but wrong, ${t.unsure} not sure`,
+      s.reading_totals_locked_key ? el("small", { text: `Against the answer key as it was frozen: ${s.reading_totals_locked_key.right} of ${t.answers}. One key was corrected afterwards, and the change is logged.` }) : null,
       el("details", { class: "more-info" }, el("summary", { text: "Question by question" }),
-        el("div", { class: "table-scroll" }, el("table", {}, el("tr", {}, el("th", { text: "Question" }), el("th", { class: "num", text: "Right" }), el("th", { class: "num", text: "Wrong" }), el("th", { class: "num", text: "Unsure" })),
+        el("div", { class: "table-scroll" }, el("table", {}, el("tr", {}, el("th", { text: "Question" }), el("th", { class: "num", text: "Right" }), el("th", { class: "num", text: "Wrong" }), el("th", { class: "num", text: "Not sure" })),
           ...Object.entries(s.reading).map(([q, v]) => el("tr", {}, el("td", { text: QNAME[q] }), el("td", { class: "num", text: String(v.right) }), el("td", { class: "num", text: String(v.confident_wrong) }), el("td", { class: "num", text: String(v.unsure) }))))),
-        el("small", { text: "Jev often couldn't tell who wrote a third-person call note. An unsure answer there raises no flag, because every first call confirms who decides." })))],
+        el("small", { text: "Jev often couldn't tell who wrote a note a teammate wrote about a caller. Not being sure there is ignored, because every first call confirms who decides." })))],
   ];
-  $("#k-scores").replaceChildren(...rows.map(([k, v]) => el("div", { class: "s" }, el("span", { class: "k", text: k }), el("span", { class: "v" }, v))),
-    el("p", { class: "caption", text: "Scored on planted, made-up problems that were written to be clear-cut, so this is close to a best case. Real leads are messier, and real accuracy needs real leads." }));
+  // Up front: what was caught, false alarms, and the comparison. The rest sits under "More detail".
+  const front = ["Problems only a reader could spot", "False alarms", "Against simple rules"];
+  const line = ([k, v]) => el("div", { class: "s" }, el("span", { class: "k", text: k }), el("span", { class: "v" }, v));
+  $("#k-scores").replaceChildren(...rows.filter(([k]) => front.includes(k)).map(line),
+    el("details", { class: "more-info block" }, el("summary", { text: "More detail" }), ...rows.filter(([k]) => !front.includes(k)).map(line)),
+    el("p", { class: "caption", text: "Scored on made-up problems written to be clear-cut, so this is close to a best case." }));
 
   // Where they came from: problems per lead, by source.
   const bySource = {};
@@ -396,21 +437,21 @@ function drawChecked() {
     for (const p of D.problemKey[lead.id]) { x.problems++; const k = p.kind.split(":")[0]; x.kinds[k] = (x.kinds[k] || 0) + 1; }
   }
   const ranked = Object.entries(bySource).map(([k, x]) => [k, x, x.problems / x.leads]).sort((a, b2) => b2[2] - a[2]);
-  const [topSrc, top, rate] = ranked[0];
+  const [topSrc, top] = ranked[0];
   const topKind = Object.entries(top.kinds).sort((a, b2) => b2[1] - a[1])[0][0];
-  const others = ranked.slice(1).map(([k, x]) => `${SRC[k].toLowerCase()} ${x.problems} on ${x.leads}`).join(", ");
-  $("#k-source").replaceChildren(`${SRC[topSrc]} leads had the most problems per lead: ${top.problems} on ${top.leads} (${rate.toFixed(2)} per lead; ${others}), most often "${D.config.wording.checks[topKind].row.toLowerCase()}". One upstream change to try: ${UPSTREAM[topKind]}. On made-up data this only shows how I'd look for the cause.`);
+  const others = ranked.slice(1).map(([k, x]) => `${SRC_MANY[k]}: ${x.problems} in ${x.leads}.`).join(" ");
+  $("#k-source").replaceChildren(`${SRC_MANY[topSrc]} had the most problems: ${top.problems} in ${top.leads} leads, most often "${D.config.wording.checks[topKind].row.toLowerCase()}". (${others}) One change to try: ${UPSTREAM[topKind]}. The data is made up, so this only shows how I'd look for a cause.`);
 
-  $("#k-own").replaceChildren(el("p", {}, el("b", { text: "The numbers I'd own if this were real: " }), "the share of leads ready to quote within one business day, by lane; the share of Fix first leads that get recovered; and minutes to the first real conversation."),
-    el("p", { text: "Not measured here: nobody uses this page." }));
+  $("#k-own").replaceChildren(el("p", {}, el("b", { text: "If this were real, I'd track three numbers: " }), "how many leads are ready to quote within a day, how many Fix first leads get fixed, and how long until the first real conversation."));
   $("#k-lock").textContent = D.locked
-    ? `The answer keys, rules and questions were fingerprinted before Jev's scored run (jev-answers.json, run.locked), and a test checks them. The lock commit is in a private working repo; the fingerprints are public. ${D.lockChanges.length} later changes are logged in order in lock-changes.json, each with its reason.`
+    ? `The right answers, rules and questions were frozen before Jev's scored run, and a test fails if they change. ${D.lockChanges.length} later changes are logged, each with its reason (lock-changes.json).`
     : "Jev hasn't read the scored leads yet.";
   $("#k-audit").textContent = D.audit
-    ? `${D.audit.auditor}, labeled ${D.audit.leads} leads blind and agreed with the keys on ${D.audit.agreement_pct}% of answers before anything was settled. That shows the written rules are clear, not that the labels are right.`
+    ? `A different AI (Codex, from OpenAI) labeled ${D.audit.leads} leads without seeing the answers and agreed on ${D.audit.agreement_pct === 100 ? "every one" : `${D.audit.agreement_pct}% of answers`}. That shows the rules are clear, not that the answers are right.`
     : "";
+  const reread = D.rereads;
   $("#k-run").textContent = D.run
-    ? `Jev (${D.run.model_asked}, TypeSafe) read all 100 leads on ${D.runDate} for about $${D.run.cost_dollars.toFixed(3)}, estimated from token counts at TypeSafe's listed price; ${(D.run.rereads || []).reduce((n, x) => n + x.leads.length, 0)} leads were re-read after their text was corrected. This page shows that saved run; it doesn't call Jev.`
+    ? `Jev read all ${D.leads.length} leads on ${D.runDate} for about $${D.run.cost_dollars.toFixed(3)}.${reread ? ` ${reread} were re-read after small text fixes (see CHANGES.md).` : ""} The page shows those saved answers and never calls Jev.`
     : "Design preview: Jev hasn't read these leads yet.";
 }
 
@@ -430,7 +471,8 @@ async function main() {
   const answers = preview ? Object.fromEntries(leads.map((l) => [l.id, perfectAnswers(readingKey[l.id])])) : jev.answers;
   D = { config: { questions, rules, checks, wording }, leads, readingKey, answers, meta: preview ? {} : jev.per_lead, closed: closedFile.closed || {},
     problemKey: Object.fromEntries(leads.map((l) => [l.id, problemKey[l.id]])), run: preview ? null : jev.run, runDate: preview ? null : jev.run.started.slice(0, 10),
-    locked: preview ? null : jev.run.locked, lockChanges: lock.changes || [], audit: audit && audit.summary };
+    locked: preview ? null : jev.run.locked, lockChanges: lock.changes || [], audit: audit && audit.summary,
+    rereads: preview ? 0 : new Set((jev.run.rereads || []).flatMap((x) => x.leads)).size };
   $("#preview-note").hidden = !preview;
   compute();
   // The scores shown are a fresh scoring in the browser (the same code as score.mjs); scores.json only adds the baseline.
@@ -438,8 +480,11 @@ async function main() {
   D.scores = { ...score(D.config, D.baseDay, D.problemKey, readingKey, expected), baseline: scores && scores.baseline,
     reading_totals_locked_key: scores && scores.reading_totals_locked_key, lead_level_original_rule: scores && scores.lead_level_original_rule };
   drawAll();
+  fillNumbers();
   drawChecked();
   $("#scrim").addEventListener("click", closePanel);
+  // The page behind the open panel doesn't scroll.
+  for (const ev of ["wheel", "touchmove"]) $("#scrim").addEventListener(ev, (e) => e.preventDefault(), { passive: false });
   const ask = new URLSearchParams(location.search).get("lead");
   if (ask && D.day.results.some((r) => r.id === ask)) openPanel(ask);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#panel").hidden) closePanel(); trapTab(e); });
