@@ -77,7 +77,7 @@ Then open http://127.0.0.1:5111/ in your browser. Press Control-C in the termina
 You need Node.js 20 or newer and Python 3. Run these from the `every-lead` folder.
 
 ```sh
-node --test tests/
+node --test tests/*.test.mjs
 ```
 
 This checks the groups, steps, fix notes, messages and scores, and re-sorts all 100 leads from the saved answers.
