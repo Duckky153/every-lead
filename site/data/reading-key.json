@@ -1,0 +1,1172 @@
+{
+ "L001": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L002": {
+  "what_business": "tech_creative",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "yes",
+  "instructions_in_text": "no"
+ },
+ "L003": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L004": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L005": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L006": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L007": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L008": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L009": {
+  "what_business": "building_trades",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L010": {
+  "what_business": "retail_shop",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L011": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L012": {
+  "what_business": "food_drink",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L013": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L014": {
+  "what_business": "cannot_tell",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L015": {
+  "what_business": "building_trades",
+  "who_is_writing": "staff_sent_by_someone_else",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L016": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "yes"
+ },
+ "L017": {
+  "what_business": "tech_creative",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L018": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L019": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L020": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L021": {
+  "what_business": "office_professional",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L022": {
+  "what_business": "auto_repair",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L023": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L024": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L025": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L026": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L027": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L028": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "someone_outside",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L029": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L030": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L031": {
+  "what_business": "food_drink",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L032": {
+  "what_business": "retail_shop",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L033": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L034": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L035": {
+  "what_business": "building_trades",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "yes"
+ },
+ "L036": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L037": {
+  "what_business": "retail_shop",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L038": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L039": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L040": {
+  "what_business": "building_trades",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L041": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L042": {
+  "what_business": "tech_creative",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "yes",
+  "instructions_in_text": "no"
+ },
+ "L043": {
+  "what_business": "cleaning",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L044": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L045": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L046": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L047": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L048": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L049": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L050": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L051": {
+  "what_business": "auto_repair",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L052": {
+  "what_business": "office_professional",
+  "who_is_writing": "staff_sent_by_someone_else",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L053": {
+  "what_business": "food_drink",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L054": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L055": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L056": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L057": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L058": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L059": {
+  "what_business": "tech_creative",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L060": {
+  "what_business": "retail_shop",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L061": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L062": {
+  "what_business": "office_professional",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L063": {
+  "what_business": "auto_repair",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L064": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L065": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L066": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L067": {
+  "what_business": "auto_repair",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L068": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L069": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L070": {
+  "what_business": "food_drink",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L071": {
+  "what_business": "auto_repair",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L072": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L073": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L074": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L075": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L076": {
+  "what_business": "office_professional",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L077": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L078": {
+  "what_business": "retail_shop",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L079": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L080": {
+  "what_business": "building_trades",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L081": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L082": {
+  "what_business": "cannot_tell",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L083": {
+  "what_business": "personal_care",
+  "who_is_writing": "someone_outside",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L084": {
+  "what_business": "cannot_tell",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L085": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L086": {
+  "what_business": "office_professional",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L087": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L088": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L089": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L090": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L091": {
+  "what_business": "auto_repair",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L092": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L093": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L094": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L095": {
+  "what_business": "cannot_tell",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L096": {
+  "what_business": "building_trades",
+  "who_is_writing": "staff_sent_by_someone_else",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L097": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L098": {
+  "what_business": "retail_shop",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L099": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "L100": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P001": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P002": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P003": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P004": {
+  "what_business": "auto_repair",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P005": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P006": {
+  "what_business": "office_professional",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P007": {
+  "what_business": "building_trades",
+  "who_is_writing": "staff_sent_by_someone_else",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P008": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "owner_only",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P009": {
+  "what_business": "cannot_tell",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P010": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P011": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P012": {
+  "what_business": "retail_shop",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P013": {
+  "what_business": "tech_creative",
+  "who_is_writing": "cannot_tell",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "yes",
+  "instructions_in_text": "no"
+ },
+ "P014": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P015": {
+  "what_business": "transport_delivery",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P016": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "someone_outside",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P017": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "11_to_50",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P018": {
+  "what_business": "food_drink",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P019": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P020": {
+  "what_business": "tech_creative",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P021": {
+  "what_business": "cannot_tell",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P022": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "yes"
+ },
+ "P023": {
+  "what_business": "auto_repair",
+  "who_is_writing": "staff_sent_by_someone_else",
+  "asks_coverage_question": "no",
+  "timing": "within_a_month",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P024": {
+  "what_business": "landscaping_outdoor",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "right_away",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P025": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "has_policy_renewing_later",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P026": {
+  "what_business": "retail_shop",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P027": {
+  "what_business": "cleaning",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P028": {
+  "what_business": "building_trades",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P029": {
+  "what_business": "personal_care",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "no",
+  "timing": "not_stated",
+  "employees_in_text": "not_stated",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ },
+ "P030": {
+  "what_business": "retail_shop",
+  "who_is_writing": "owner_or_officer",
+  "asks_coverage_question": "yes",
+  "timing": "not_stated",
+  "employees_in_text": "2_to_10",
+  "spam_or_test": "no",
+  "instructions_in_text": "no"
+ }
+}

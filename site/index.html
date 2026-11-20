@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every Lead: one day of leads, sorted (unofficial prototype)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231d3a47'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23ff6d63'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#">Every Lead</a>
+    <span class="tag">Unofficial prototype · sample data</span>
+  </div>
+</header>
+<div class="preview-note" id="preview-note" hidden><div class="wrap">Design preview: Jev hasn't read these leads yet, so the answer key stands in for its answers. Not for publishing.</div></div>
+
+<main>
+  <section class="band cream">
+    <div class="wrap">
+      <p class="eyebrow"><span id="h-eyebrow">100 sample leads · one day</span></p>
+      <h1>Most go now. <em>The rest get fixed.</em></h1>
+      <p class="lead" id="h-lead"></p>
+      <p class="lead small">Jev, an AI model from TypeSafe, reads what each person wrote. Plain code decides the rest. Try it: open a lead in Fix first and fill in the fix.</p>
+      <div class="strip" id="h-strip"></div>
+      <p class="caption">All made up. 40 leads have problems planted on purpose for the checks to find; that's not a claim about real leads.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <p class="eyebrow">The leads</p>
+          <h2 id="l-title"></h2>
+        </div>
+      </div>
+      <div class="tabs" id="l-tabs" role="tablist"></div>
+      <div id="l-rows"></div>
+      <p class="caption" id="l-caption">Click a lead to see what's wrong, the fix, and its steps.</p>
+    </div>
+  </section>
+
+  <section class="band cream">
+    <div class="wrap">
+      <p class="eyebrow">How it's checked</p>
+      <h2>One model step. <em>Everything that decides is code.</em></h2>
+      <p class="body-text">Every lead runs the same steps: it arrives, Jev reads what the person wrote, the checks run, the lane is picked, and the first-call steps or the handoff card are written. Only Jev's step is a model. It answers 7 fixed questions with a label and a number, and writes no text.</p>
+
+      <p class="eyebrow gap">Evals</p>
+      <div class="scores" id="k-scores"></div>
+
+      <div class="own" id="k-own"></div>
+
+      <details class="more-info block"><summary>Jev's 7 questions, and what happens when it's unsure</summary><ol class="qlist" id="k-questions"></ol></details>
+      <details class="more-info block"><summary>The checks, kept as data</summary><div class="checks-list" id="k-checks"></div></details>
+      <details class="more-info block"><summary>Where the problems came from</summary><p class="body-text" id="k-source"></p></details>
+      <details class="more-info block"><summary>The lock and the label audit</summary><p class="body-text" id="k-lock"></p><p class="body-text" id="k-audit"></p></details>
+      <p class="caption" id="k-run"></p>
+    </div>
+  </section>
+</main>
+
+<aside class="panel" id="panel" hidden role="dialog" aria-modal="true" aria-label="Lead detail" tabindex="-1">
+  <div class="panel-inner" id="panel-body"></div>
+</aside>
+<div class="scrim" id="scrim" hidden></div>
+
+<footer class="foot">
+  <div class="wrap">Made-up leads only: every business, person, phone and email is made up, written by Claude for this demo. Nothing is sent to anyone. Unofficial prototype, not affiliated with Harper. Built by Dakshit Raj with Claude Code and Jev. Also: <a href="https://duckky153.github.io/sold-to-covered/">Sold to Covered</a>.</div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

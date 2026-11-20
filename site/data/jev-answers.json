@@ -1,0 +1,7391 @@
+{
+ "run": {
+  "model_asked": "jev-1.14.0",
+  "question_version": "el-v1",
+  "questions_fingerprint": "ae52bed3897616f87d83bb301b20ebc75b7228115bf7e73b7122a890db2248e2",
+  "leads_fingerprint": "42c04b60cff05aefa65da24ca0def59a68b51e72eefd0ad5ce3188466546f930",
+  "set": "scored",
+  "started": "2026-11-19T22:26:09",
+  "finished": "2026-11-19T22:26:23",
+  "calls_paid": 100,
+  "calls_cached": 0,
+  "errors": [],
+  "input_tokens": 142829,
+  "price_per_million": 0.042,
+  "price_read": "docs.typesafe.ai/models, 2026-11-19",
+  "cost_dollars": 0.005999,
+  "cap_dollars": 0.5,
+  "locked": {
+   "commit": "7b57c9fca5d2e14240343adf58e7cd23070b0cd7",
+   "files": {
+    "data/notes.json": "59c8c36b3f3b1e9d3f57d41d42a700baf2e879899830bc8903de4bd18f926ce1",
+    "site/data/leads.json": "d2f668537613dc2217d78ca6c04b405b2b55f1c43d13026f99d6309d5a0fb10d",
+    "site/data/reading-key.json": "5494ed9350c81790251828d95b437a8ec30d06fc3274db755bf432f24c2cb57a",
+    "site/data/problem-key.json": "f2ea2a9e58109923ad97830321576972a8a04310ff7de47c9ac17c722d2ebbc6",
+    "site/data/rules.json": "1c7ecbd04be91b1708f7316792789c7835db945977296ae818755af59d6c7313",
+    "site/data/checks.json": "269a20e4fc43456adf4e6f4b1efb155e7c821456a50461f1832d39f1e448ad3a",
+    "site/data/questions.json": "739c46708a289e1d0fb950d06bac5bbc102ee3cf550275c7451231c72ee8737a"
+   }
+  },
+  "rereads": [
+   {
+    "leads": [
+     "L008",
+     "L021",
+     "L087",
+     "L091"
+    ],
+    "reason": "Review B1: the note named a real company; the name became 'you'",
+    "date": "2026-11-19T22:43:25",
+    "input_tokens": 5853,
+    "cost_dollars": 0.000246,
+    "errors": []
+   },
+   {
+    "leads": [
+     "L022",
+     "L039",
+     "L042",
+     "L061",
+     "L063",
+     "L079",
+     "L086"
+    ],
+    "reason": "Review round 3: famous-person and real-company names replaced with made-up ones; two duplicate notes now name the same town as their originals",
+    "date": "2026-11-19T23:59:02",
+    "input_tokens": 10081,
+    "cost_dollars": 0.000423,
+    "errors": []
+   },
+   {
+    "leads": [
+     "L006",
+     "L041"
+    ],
+    "reason": "Review round 4: the last two notes still named a real payroll company; it became the made-up Fernvale",
+    "date": "2026-11-20T00:19:46",
+    "input_tokens": 2877,
+    "cost_dollars": 0.000121,
+    "errors": []
+   }
+  ],
+  "leads_fingerprint_current": "c1c5d45e2de39949b0798b85ff81b6c95a7ebcd7cdf5744d659eb2e459b0f1ef"
+ },
+ "answers": {
+  "L001": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.68,
+    "probabilities": {
+     "owner_or_officer": 0.76,
+     "staff_sent_by_someone_else": 0.04,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.19
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.57,
+    "probabilities": {
+     "right_away": 0.04,
+     "within_a_month": 0.68,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.28
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L002": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.01,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.99,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.48,
+    "probabilities": {
+     "owner_or_officer": 0.05,
+     "staff_sent_by_someone_else": 0.25,
+     "someone_outside": 0.09,
+     "cannot_tell": 0.61
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.99
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L003": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.01,
+     "landscaping_outdoor": 0.99,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.4,
+    "probabilities": {
+     "owner_or_officer": 0.44,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.55
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.6,
+    "probabilities": {
+     "right_away": 0.03,
+     "within_a_month": 0.27,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.7
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "not_stated": 0.97,
+     "owner_only": 0.0,
+     "2_to_10": 0.03,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L004": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.65,
+    "probabilities": {
+     "right_away": 0.07,
+     "within_a_month": 0.74,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.19
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L005": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.84,
+    "probabilities": {
+     "not_stated": 0.87,
+     "owner_only": 0.02,
+     "2_to_10": 0.11,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L006": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 0.98,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.98,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.01,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.96,
+    "probabilities": {
+     "owner_or_officer": 0.97,
+     "staff_sent_by_someone_else": 0.03,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.01,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.92,
+    "probabilities": {
+     "not_stated": 0.94,
+     "owner_only": 0.05,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L007": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.88,
+    "probabilities": {
+     "owner_or_officer": 0.03,
+     "staff_sent_by_someone_else": 0.05,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.91
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.99,
+     "11_to_50": 0.01,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L008": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.53,
+    "probabilities": {
+     "right_away": 0.06,
+     "within_a_month": 0.65,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.29
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L009": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.39,
+    "probabilities": {
+     "owner_or_officer": 0.54,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.45
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.95,
+    "probabilities": {
+     "not_stated": 0.96,
+     "owner_only": 0.0,
+     "2_to_10": 0.04,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L010": {
+   "what_business": {
+    "type": "choice",
+    "choice": "retail_shop",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 1.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.45,
+    "probabilities": {
+     "owner_or_officer": 0.4,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.59
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.57,
+    "probabilities": {
+     "right_away": 0.19,
+     "within_a_month": 0.68,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.13
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L011": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.99,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.71,
+    "probabilities": {
+     "right_away": 0.19,
+     "within_a_month": 0.03,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.78
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "not_stated": 0.97,
+     "owner_only": 0.02,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L012": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 0.97,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.97,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.03
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.84,
+    "probabilities": {
+     "owner_or_officer": 0.07,
+     "staff_sent_by_someone_else": 0.05,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.88
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.1
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.65,
+    "probabilities": {
+     "right_away": 0.02,
+     "within_a_month": 0.24,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.74
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L013": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 0.97,
+    "probabilities": {
+     "right_away": 0.98,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.01,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L014": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 1.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.95,
+    "probabilities": {
+     "owner_or_officer": 0.96,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.03
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.98,
+    "probabilities": {
+     "not_stated": 0.98,
+     "owner_only": 0.02,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.21
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L015": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 0.0,
+     "staff_sent_by_someone_else": 1.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.4,
+    "probabilities": {
+     "not_stated": 0.47,
+     "owner_only": 0.01,
+     "2_to_10": 0.52,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L016": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.97,
+    "probabilities": {
+     "owner_or_officer": 0.98,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.47
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.99
+   }
+  },
+  "L017": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.4,
+    "probabilities": {
+     "owner_or_officer": 0.55,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.44
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 1.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L018": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.99,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.92,
+    "probabilities": {
+     "not_stated": 0.94,
+     "owner_only": 0.06,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L019": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.96,
+    "probabilities": {
+     "owner_or_officer": 0.97,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.03
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.91,
+    "probabilities": {
+     "not_stated": 0.93,
+     "owner_only": 0.07,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L020": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 1.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.8,
+    "probabilities": {
+     "owner_or_officer": 0.85,
+     "staff_sent_by_someone_else": 0.13,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.02
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L021": {
+   "what_business": {
+    "type": "choice",
+    "choice": "office_professional",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 1.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.91,
+    "probabilities": {
+     "not_stated": 0.93,
+     "owner_only": 0.06,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.01
+   }
+  },
+  "L022": {
+   "what_business": {
+    "type": "choice",
+    "choice": "auto_repair",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 1.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.63,
+    "probabilities": {
+     "owner_or_officer": 0.25,
+     "staff_sent_by_someone_else": 0.02,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.72
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.73,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.11,
+     "has_policy_renewing_later": 0.8,
+     "not_stated": 0.09
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L023": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L024": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.85,
+    "probabilities": {
+     "owner_or_officer": 0.08,
+     "staff_sent_by_someone_else": 0.02,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.89
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.01,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L025": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.69,
+    "probabilities": {
+     "owner_or_officer": 0.77,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.22
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.73,
+    "probabilities": {
+     "right_away": 0.06,
+     "within_a_month": 0.8,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.14
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.94,
+    "probabilities": {
+     "not_stated": 0.95,
+     "owner_only": 0.0,
+     "2_to_10": 0.05,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L026": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 1.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.99,
+    "probabilities": {
+     "owner_or_officer": 0.99,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.99
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.02,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.97
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.99,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L027": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.89,
+    "probabilities": {
+     "owner_or_officer": 0.92,
+     "staff_sent_by_someone_else": 0.02,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.06
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.59,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.28,
+     "has_policy_renewing_later": 0.69,
+     "not_stated": 0.02
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.98,
+    "probabilities": {
+     "not_stated": 0.02,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.98,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L028": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 1.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "someone_outside",
+    "confidence": 0.75,
+    "probabilities": {
+     "owner_or_officer": 0.03,
+     "staff_sent_by_someone_else": 0.16,
+     "someone_outside": 0.81,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "right_away": 0.03,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.97
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.99,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L029": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.96,
+    "probabilities": {
+     "owner_or_officer": 0.97,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.03
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.99,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L030": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 1.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.93,
+    "probabilities": {
+     "owner_or_officer": 0.95,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.03
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.85
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 1.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.21
+   }
+  },
+  "L031": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.89,
+    "probabilities": {
+     "owner_or_officer": 0.08,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.92
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.98,
+    "probabilities": {
+     "not_stated": 0.98,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.02,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L032": {
+   "what_business": {
+    "type": "choice",
+    "choice": "retail_shop",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.99,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.01,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.68,
+    "probabilities": {
+     "owner_or_officer": 0.23,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.76
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.71,
+    "probabilities": {
+     "right_away": 0.03,
+     "within_a_month": 0.78,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.19
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L033": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.79,
+    "probabilities": {
+     "owner_or_officer": 0.04,
+     "staff_sent_by_someone_else": 0.12,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.84
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L034": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 1.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L035": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.52,
+    "probabilities": {
+     "owner_or_officer": 0.08,
+     "staff_sent_by_someone_else": 0.23,
+     "someone_outside": 0.05,
+     "cannot_tell": 0.64
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.45
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.99
+   }
+  },
+  "L036": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.72,
+    "probabilities": {
+     "owner_or_officer": 0.79,
+     "staff_sent_by_someone_else": 0.03,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.17
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "right_away": 0.03,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.97
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.99,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L037": {
+   "what_business": {
+    "type": "choice",
+    "choice": "retail_shop",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 1.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.72,
+    "probabilities": {
+     "owner_or_officer": 0.21,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.79
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L038": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 0.96,
+    "probabilities": {
+     "building_trades": 0.01,
+     "landscaping_outdoor": 0.96,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.03,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.98
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.95,
+    "probabilities": {
+     "not_stated": 0.96,
+     "owner_only": 0.03,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L039": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.41,
+    "probabilities": {
+     "owner_or_officer": 0.24,
+     "staff_sent_by_someone_else": 0.16,
+     "someone_outside": 0.04,
+     "cannot_tell": 0.56
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.09
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 0.97,
+    "probabilities": {
+     "right_away": 0.98,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.01
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L040": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.41,
+    "probabilities": {
+     "owner_or_officer": 0.56,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.43
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.44,
+    "probabilities": {
+     "not_stated": 0.55,
+     "owner_only": 0.0,
+     "2_to_10": 0.45,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L041": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.96,
+    "probabilities": {
+     "owner_or_officer": 0.97,
+     "staff_sent_by_someone_else": 0.03,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.13
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "not_stated": 0.97,
+     "owner_only": 0.01,
+     "2_to_10": 0.02,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L042": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 0.91,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.02,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.92,
+     "personal_not_business": 0.01,
+     "cannot_tell": 0.05
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "someone_outside",
+    "confidence": 0.23,
+    "probabilities": {
+     "owner_or_officer": 0.03,
+     "staff_sent_by_someone_else": 0.25,
+     "someone_outside": 0.42,
+     "cannot_tell": 0.3
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.99
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.05
+   }
+  },
+  "L043": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 0.96,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.96,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.01,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.03
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.44,
+    "probabilities": {
+     "owner_or_officer": 0.4,
+     "staff_sent_by_someone_else": 0.02,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.58
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.71,
+    "probabilities": {
+     "right_away": 0.02,
+     "within_a_month": 0.78,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.2
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.95,
+    "probabilities": {
+     "not_stated": 0.04,
+     "owner_only": 0.0,
+     "2_to_10": 0.96,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L044": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L045": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.99,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.01,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.85,
+    "probabilities": {
+     "owner_or_officer": 0.05,
+     "staff_sent_by_someone_else": 0.06,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.89
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.65,
+    "probabilities": {
+     "not_stated": 0.72,
+     "owner_only": 0.05,
+     "2_to_10": 0.23,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L046": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.91,
+    "probabilities": {
+     "right_away": 0.07,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.93
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 1.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L047": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.69,
+    "probabilities": {
+     "owner_or_officer": 0.18,
+     "staff_sent_by_someone_else": 0.04,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.77
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.52,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.23,
+     "has_policy_renewing_later": 0.64,
+     "not_stated": 0.12
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.08
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L048": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 1.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.99,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L049": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.77,
+    "probabilities": {
+     "owner_or_officer": 0.83,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.15
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.82,
+    "probabilities": {
+     "not_stated": 0.86,
+     "owner_only": 0.14,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L050": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 1.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.87,
+    "probabilities": {
+     "owner_or_officer": 0.05,
+     "staff_sent_by_someone_else": 0.04,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.9
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.01,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L051": {
+   "what_business": {
+    "type": "choice",
+    "choice": "auto_repair",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 1.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.99,
+    "probabilities": {
+     "owner_or_officer": 0.99,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.98
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 1.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L052": {
+   "what_business": {
+    "type": "choice",
+    "choice": "office_professional",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 1.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 0.0,
+     "staff_sent_by_someone_else": 1.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.92,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.05,
+     "not_stated": 0.94
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.98,
+    "probabilities": {
+     "not_stated": 0.98,
+     "owner_only": 0.0,
+     "2_to_10": 0.02,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L053": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.49,
+    "probabilities": {
+     "owner_or_officer": 0.24,
+     "staff_sent_by_someone_else": 0.14,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.62
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.99,
+     "owner_only": 0.01,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.29
+   }
+  },
+  "L054": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.99,
+    "probabilities": {
+     "owner_or_officer": 0.99,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.12
+   }
+  },
+  "L055": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 1.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.99,
+    "probabilities": {
+     "owner_or_officer": 0.99,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.2
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L056": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 1.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.94,
+    "probabilities": {
+     "not_stated": 0.02,
+     "owner_only": 0.0,
+     "2_to_10": 0.03,
+     "11_to_50": 0.95,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L057": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.75,
+    "probabilities": {
+     "owner_or_officer": 0.07,
+     "staff_sent_by_someone_else": 0.1,
+     "someone_outside": 0.02,
+     "cannot_tell": 0.81
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.32,
+    "probabilities": {
+     "right_away": 0.12,
+     "within_a_month": 0.39,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.49
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.86,
+    "probabilities": {
+     "not_stated": 0.89,
+     "owner_only": 0.11,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.11
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L058": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.53,
+    "probabilities": {
+     "owner_or_officer": 0.31,
+     "staff_sent_by_someone_else": 0.04,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.65
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.99,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 1.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L059": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.67,
+    "probabilities": {
+     "owner_or_officer": 0.18,
+     "staff_sent_by_someone_else": 0.07,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.75
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.1
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.2
+   }
+  },
+  "L060": {
+   "what_business": {
+    "type": "choice",
+    "choice": "retail_shop",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 1.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.43,
+    "probabilities": {
+     "owner_or_officer": 0.43,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.57
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.26
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L061": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.77,
+    "probabilities": {
+     "right_away": 0.13,
+     "within_a_month": 0.83,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.04
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.99,
+     "11_to_50": 0.01,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L062": {
+   "what_business": {
+    "type": "choice",
+    "choice": "office_professional",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 1.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.01,
+     "2_to_10": 0.99,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L063": {
+   "what_business": {
+    "type": "choice",
+    "choice": "auto_repair",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 1.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.21,
+    "probabilities": {
+     "owner_or_officer": 0.41,
+     "staff_sent_by_someone_else": 0.26,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.33
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.97,
+    "probabilities": {
+     "right_away": 0.02,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.98
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.08
+   }
+  },
+  "L064": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 1.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.81,
+    "probabilities": {
+     "not_stated": 0.85,
+     "owner_only": 0.14,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L065": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.43,
+    "probabilities": {
+     "owner_or_officer": 0.57,
+     "staff_sent_by_someone_else": 0.09,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.33
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.73,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.08,
+     "has_policy_renewing_later": 0.8,
+     "not_stated": 0.12
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 1.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L066": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.69,
+    "probabilities": {
+     "owner_or_officer": 0.19,
+     "staff_sent_by_someone_else": 0.04,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.77
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.61,
+    "probabilities": {
+     "right_away": 0.02,
+     "within_a_month": 0.71,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.27
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L067": {
+   "what_business": {
+    "type": "choice",
+    "choice": "auto_repair",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 1.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.36,
+    "probabilities": {
+     "owner_or_officer": 0.47,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.52
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "not_stated": 0.97,
+     "owner_only": 0.0,
+     "2_to_10": 0.03,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L068": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.95,
+    "probabilities": {
+     "not_stated": 0.96,
+     "owner_only": 0.04,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L069": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.28,
+    "probabilities": {
+     "owner_or_officer": 0.4,
+     "staff_sent_by_someone_else": 0.13,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.46
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L070": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.93,
+    "probabilities": {
+     "owner_or_officer": 0.04,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.95
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.72
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L071": {
+   "what_business": {
+    "type": "choice",
+    "choice": "auto_repair",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 1.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.68,
+    "probabilities": {
+     "owner_or_officer": 0.2,
+     "staff_sent_by_someone_else": 0.04,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.76
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 0.69,
+    "probabilities": {
+     "right_away": 0.77,
+     "within_a_month": 0.09,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.14
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.99,
+     "owner_only": 0.0,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L072": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 1.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 1.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.01
+   }
+  },
+  "L073": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.71,
+    "probabilities": {
+     "owner_or_officer": 0.14,
+     "staff_sent_by_someone_else": 0.07,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.78
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.81,
+    "probabilities": {
+     "right_away": 0.03,
+     "within_a_month": 0.86,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.11
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.99,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L074": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.93,
+    "probabilities": {
+     "right_away": 0.05,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.95
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.99,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L075": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 0.97,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.97,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.03,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L076": {
+   "what_business": {
+    "type": "choice",
+    "choice": "office_professional",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 1.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.63,
+    "probabilities": {
+     "right_away": 0.25,
+     "within_a_month": 0.72,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.03
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L077": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.99
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.98,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.01,
+     "2_to_10": 0.98,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L078": {
+   "what_business": {
+    "type": "choice",
+    "choice": "retail_shop",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.99,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.01,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.52,
+    "probabilities": {
+     "right_away": 0.07,
+     "within_a_month": 0.64,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.29
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.79,
+    "probabilities": {
+     "not_stated": 0.83,
+     "owner_only": 0.17,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L079": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 0.67,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.7,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.3,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.98,
+    "probabilities": {
+     "not_stated": 0.98,
+     "owner_only": 0.02,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L080": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.47,
+    "probabilities": {
+     "owner_or_officer": 0.35,
+     "staff_sent_by_someone_else": 0.05,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.6
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.92,
+    "probabilities": {
+     "not_stated": 0.06,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.94,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L081": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.99,
+     "not_stated": 0.01
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L082": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.9,
+    "probabilities": {
+     "building_trades": 0.02,
+     "landscaping_outdoor": 0.03,
+     "cleaning": 0.03,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.01,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.91
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.65,
+    "probabilities": {
+     "owner_or_officer": 0.74,
+     "staff_sent_by_someone_else": 0.06,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.19
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.92,
+    "probabilities": {
+     "not_stated": 0.94,
+     "owner_only": 0.06,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.33
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L083": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 0.29,
+    "probabilities": {
+     "owner_or_officer": 0.01,
+     "staff_sent_by_someone_else": 0.47,
+     "someone_outside": 0.42,
+     "cannot_tell": 0.1
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L084": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.01,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.99
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.48,
+    "probabilities": {
+     "owner_or_officer": 0.39,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.61
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "not_stated": 0.97,
+     "owner_only": 0.01,
+     "2_to_10": 0.02,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L085": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.01,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.99,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.99,
+    "probabilities": {
+     "owner_or_officer": 0.99,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.01
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.69,
+    "probabilities": {
+     "right_away": 0.21,
+     "within_a_month": 0.02,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.77
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 1.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L086": {
+   "what_business": {
+    "type": "choice",
+    "choice": "office_professional",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 1.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.96,
+    "probabilities": {
+     "owner_or_officer": 0.97,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.02
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 0.51,
+    "probabilities": {
+     "not_stated": 0.39,
+     "owner_only": 0.61,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.11
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L087": {
+   "what_business": {
+    "type": "choice",
+    "choice": "landscaping_outdoor",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 1.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "has_policy_renewing_later",
+    "confidence": 0.88,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.05,
+     "has_policy_renewing_later": 0.91,
+     "not_stated": 0.04
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 0.95,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.96,
+     "11_to_50": 0.03,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.02
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L088": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "right_away": 0.03,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.97
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.01,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.99,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L089": {
+   "what_business": {
+    "type": "choice",
+    "choice": "food_drink",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 1.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.99
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L090": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L091": {
+   "what_business": {
+    "type": "choice",
+    "choice": "auto_repair",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 1.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.11
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.91,
+    "probabilities": {
+     "not_stated": 0.93,
+     "owner_only": 0.06,
+     "2_to_10": 0.01,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.04
+   }
+  },
+  "L092": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cleaning",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 1.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.83,
+    "probabilities": {
+     "owner_or_officer": 0.07,
+     "staff_sent_by_someone_else": 0.05,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.87
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.99,
+     "within_a_month": 0.01,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 1.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.08
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L093": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 0.99,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.01,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.99,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.79,
+    "probabilities": {
+     "owner_or_officer": 0.07,
+     "staff_sent_by_someone_else": 0.08,
+     "someone_outside": 0.01,
+     "cannot_tell": 0.84
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "11_to_50",
+    "confidence": 0.99,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.01,
+     "11_to_50": 0.99,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.07
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L094": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 0.95,
+    "probabilities": {
+     "owner_or_officer": 0.96,
+     "staff_sent_by_someone_else": 0.01,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.03
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.06
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.29,
+    "probabilities": {
+     "right_away": 0.33,
+     "within_a_month": 0.47,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.2
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.96,
+    "probabilities": {
+     "not_stated": 0.97,
+     "owner_only": 0.01,
+     "2_to_10": 0.02,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L095": {
+   "what_business": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 1.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "cannot_tell",
+    "confidence": 0.65,
+    "probabilities": {
+     "owner_or_officer": 0.08,
+     "staff_sent_by_someone_else": 0.18,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.74
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.69,
+    "probabilities": {
+     "right_away": 0.08,
+     "within_a_month": 0.77,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.15
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 1.0,
+     "owner_only": 0.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L096": {
+   "what_business": {
+    "type": "choice",
+    "choice": "building_trades",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 1.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 0.0,
+     "staff_sent_by_someone_else": 1.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.8,
+    "probabilities": {
+     "not_stated": 0.84,
+     "owner_only": 0.0,
+     "2_to_10": 0.16,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L097": {
+   "what_business": {
+    "type": "choice",
+    "choice": "personal_care",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 1.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 0.99,
+    "probabilities": {
+     "right_away": 0.01,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.99
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  },
+  "L098": {
+   "what_business": {
+    "type": "choice",
+    "choice": "retail_shop",
+    "confidence": 0.98,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.02,
+     "retail_shop": 0.98,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.99
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "not_stated",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 0.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 1.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.01
+   }
+  },
+  "L099": {
+   "what_business": {
+    "type": "choice",
+    "choice": "transport_delivery",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 1.0,
+     "tech_creative": 0.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.04
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "right_away",
+    "confidence": 1.0,
+    "probabilities": {
+     "right_away": 1.0,
+     "within_a_month": 0.0,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.0
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "2_to_10",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 0.0,
+     "2_to_10": 1.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.03
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.03
+   }
+  },
+  "L100": {
+   "what_business": {
+    "type": "choice",
+    "choice": "tech_creative",
+    "confidence": 1.0,
+    "probabilities": {
+     "building_trades": 0.0,
+     "landscaping_outdoor": 0.0,
+     "cleaning": 0.0,
+     "food_drink": 0.0,
+     "retail_shop": 0.0,
+     "office_professional": 0.0,
+     "personal_care": 0.0,
+     "auto_repair": 0.0,
+     "transport_delivery": 0.0,
+     "tech_creative": 1.0,
+     "personal_not_business": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "who_is_writing": {
+    "type": "choice",
+    "choice": "owner_or_officer",
+    "confidence": 1.0,
+    "probabilities": {
+     "owner_or_officer": 1.0,
+     "staff_sent_by_someone_else": 0.0,
+     "someone_outside": 0.0,
+     "cannot_tell": 0.0
+    }
+   },
+   "asks_coverage_question": {
+    "type": "noul",
+    "noul": 0.08
+   },
+   "timing": {
+    "type": "choice",
+    "choice": "within_a_month",
+    "confidence": 0.71,
+    "probabilities": {
+     "right_away": 0.05,
+     "within_a_month": 0.78,
+     "has_policy_renewing_later": 0.0,
+     "not_stated": 0.17
+    }
+   },
+   "employees_in_text": {
+    "type": "choice",
+    "choice": "owner_only",
+    "confidence": 1.0,
+    "probabilities": {
+     "not_stated": 0.0,
+     "owner_only": 1.0,
+     "2_to_10": 0.0,
+     "11_to_50": 0.0,
+     "over_50": 0.0
+    }
+   },
+   "spam_or_test": {
+    "type": "noul",
+    "noul": 0.05
+   },
+   "instructions_in_text": {
+    "type": "noul",
+    "noul": 0.02
+   }
+  }
+ },
+ "per_lead": {
+  "L001": {
+   "read_on": "2026-11-19",
+   "tokens": 1441,
+   "attempts": 1,
+   "text_fingerprint": "45a71f2188a8443b4ba05e989ece3ee7ce753abea0262b57250ec9f0f307e70a"
+  },
+  "L002": {
+   "read_on": "2026-11-19",
+   "tokens": 1419,
+   "attempts": 1,
+   "text_fingerprint": "8937b7425b4981f4631e3ff5c32043631d79f888a53517cbc12e14064482acf2"
+  },
+  "L003": {
+   "read_on": "2026-11-19",
+   "tokens": 1412,
+   "attempts": 1,
+   "text_fingerprint": "a371ae06be14a9d121b7a3b2e6527590254d5ec4e9a703066ff64728cc847fdb"
+  },
+  "L004": {
+   "read_on": "2026-11-19",
+   "tokens": 1430,
+   "attempts": 1,
+   "text_fingerprint": "f9ebc304164c90e0573d03d11281136ec53e995ee0ff570a69bdccb18393cddb"
+  },
+  "L005": {
+   "read_on": "2026-11-19",
+   "tokens": 1417,
+   "attempts": 1,
+   "text_fingerprint": "7e1813bd1c42538418cd9fe11f518f9d2522fc01e877312862a1f1cb3962066d"
+  },
+  "L006": {
+   "read_on": "2026-11-20",
+   "tokens": 1432,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "b8e9161c19ed7b3f3a592d318f801d0dd2b7aacb5e7084a1c7aac4ed3e0f6c35"
+  },
+  "L007": {
+   "read_on": "2026-11-19",
+   "tokens": 1439,
+   "attempts": 1,
+   "text_fingerprint": "6781d294429b15563b858c6f07e2f2d5bc2a5349b5f4900370e1dbe3ea9836f4"
+  },
+  "L008": {
+   "read_on": "2026-11-19",
+   "tokens": 1513,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "ff77a0048d06df23d6a890b4ce9bfefbb9bb052d3ca8d7392aad03788d1caaae"
+  },
+  "L009": {
+   "read_on": "2026-11-19",
+   "tokens": 1420,
+   "attempts": 1,
+   "text_fingerprint": "a230f5e60d33bc797018bfec30da4c00c3f5010b8a21b5c42e65c642c6fa292d"
+  },
+  "L010": {
+   "read_on": "2026-11-19",
+   "tokens": 1423,
+   "attempts": 1,
+   "text_fingerprint": "5013ac57693ba491834c653e30490f2cb9ad1b8859b895d06a108a103509c433"
+  },
+  "L011": {
+   "read_on": "2026-11-19",
+   "tokens": 1442,
+   "attempts": 1,
+   "text_fingerprint": "29cf33761b7a28df0e4116f3a307c6b7c1caf72050fc2d34e8996b84ba3aec28"
+  },
+  "L012": {
+   "read_on": "2026-11-19",
+   "tokens": 1414,
+   "attempts": 1,
+   "text_fingerprint": "9f2d582afe43e7b4bc680ed0ab21a81dcfee4a13c6760db2909534fc7580ce16"
+  },
+  "L013": {
+   "read_on": "2026-11-19",
+   "tokens": 1440,
+   "attempts": 1,
+   "text_fingerprint": "e9a9f10354124519233c9b7847e77dcd950cf58f50719b8ed084e52268915b59"
+  },
+  "L014": {
+   "read_on": "2026-11-19",
+   "tokens": 1429,
+   "attempts": 1,
+   "text_fingerprint": "76c41840521c6aa7704300338c43fe99ca520672184bb1053d9f440cbcacf933"
+  },
+  "L015": {
+   "read_on": "2026-11-19",
+   "tokens": 1430,
+   "attempts": 1,
+   "text_fingerprint": "a43921b0d547262ec90bb2ba93c7884a28485d9f833950deac78ca12cea60caa"
+  },
+  "L016": {
+   "read_on": "2026-11-19",
+   "tokens": 1429,
+   "attempts": 1,
+   "text_fingerprint": "2784357245542a53e8747d84f9b6c99cb46721c839602a65b6b486ab2862bee1"
+  },
+  "L017": {
+   "read_on": "2026-11-19",
+   "tokens": 1414,
+   "attempts": 1,
+   "text_fingerprint": "5d5168dffb211493d09bb6f0678c36fe4d2974f5547b8dbfca655279d835d8e2"
+  },
+  "L018": {
+   "read_on": "2026-11-19",
+   "tokens": 1438,
+   "attempts": 1,
+   "text_fingerprint": "ba78b507cea66faa60cf4c2d7f0069c2a41d903a873e121a6e70ad8197575c09"
+  },
+  "L019": {
+   "read_on": "2026-11-19",
+   "tokens": 1403,
+   "attempts": 1,
+   "text_fingerprint": "8eabd86f336dd43204561f61e0d2ad93c48484de8ed5986482ec83a990061af9"
+  },
+  "L020": {
+   "read_on": "2026-11-19",
+   "tokens": 1433,
+   "attempts": 1,
+   "text_fingerprint": "7d6cb5f2ab14c88159eb13d652e5392e9a7304f377ee2cfd4017762dc5acc88d"
+  },
+  "L021": {
+   "read_on": "2026-11-19",
+   "tokens": 1437,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "531dd1349b6fd6d04f251426dea16d7b4d6db9ae51b516a74c8762c494eeb2de"
+  },
+  "L022": {
+   "read_on": "2026-11-19",
+   "tokens": 1446,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "5a6ff0d5dcfd7c95d02b2de6aedba8a29ab3dfea60fa1baf03348e885e5e959f"
+  },
+  "L023": {
+   "read_on": "2026-11-19",
+   "tokens": 1415,
+   "attempts": 1,
+   "text_fingerprint": "0ba1105b6944f562e225c71d65049496c929ae3a97d3579b11da83de297af8ad"
+  },
+  "L024": {
+   "read_on": "2026-11-19",
+   "tokens": 1442,
+   "attempts": 1,
+   "text_fingerprint": "7a8f46ced16b1dcfd68ef1c8419f0d447b4e2ff6c0e87a70de82900015bc2586"
+  },
+  "L025": {
+   "read_on": "2026-11-19",
+   "tokens": 1416,
+   "attempts": 1,
+   "text_fingerprint": "6ac30733ac935f70a73f2d0b6029e28aff62f190675b14451938561208a05235"
+  },
+  "L026": {
+   "read_on": "2026-11-19",
+   "tokens": 1424,
+   "attempts": 1,
+   "text_fingerprint": "fe1e55edf70977b3d9dd014425a7e8d779c9df792f2ce351a5c8147d12ca5cc3"
+  },
+  "L027": {
+   "read_on": "2026-11-19",
+   "tokens": 1434,
+   "attempts": 1,
+   "text_fingerprint": "4d29fca70c09a118c25cf1a7d8895685789ac55ac17d3e9eebc50c9a6d1ca711"
+  },
+  "L028": {
+   "read_on": "2026-11-19",
+   "tokens": 1436,
+   "attempts": 1,
+   "text_fingerprint": "c6d3ce97d5b367522adecd341f4beb5890cdc8599984fc4bd17fb335af4b3e33"
+  },
+  "L029": {
+   "read_on": "2026-11-19",
+   "tokens": 1407,
+   "attempts": 1,
+   "text_fingerprint": "eaca814b1ace5998ecbe899168b42353960686ebbc232735d73eb9dcf4113633"
+  },
+  "L030": {
+   "read_on": "2026-11-19",
+   "tokens": 1408,
+   "attempts": 1,
+   "text_fingerprint": "9ae45faae1f04c4c932617cf99c825c1df51599dcde5f6a1e44c492268871904"
+  },
+  "L031": {
+   "read_on": "2026-11-19",
+   "tokens": 1406,
+   "attempts": 1,
+   "text_fingerprint": "a8f1fcfc69a44f90c9bef2389d7cad4c92eae136aa5bcf88311ed4f32e906072"
+  },
+  "L032": {
+   "read_on": "2026-11-19",
+   "tokens": 1417,
+   "attempts": 1,
+   "text_fingerprint": "dbae723f7e667af6f524358923b1c83ec1dedd54ce25b46b13cb18d4d961a666"
+  },
+  "L033": {
+   "read_on": "2026-11-19",
+   "tokens": 1424,
+   "attempts": 1,
+   "text_fingerprint": "3638e6403a61b1392495187e31d5822886608662a50abfa67a1b9d5c3cb11375"
+  },
+  "L034": {
+   "read_on": "2026-11-19",
+   "tokens": 1427,
+   "attempts": 1,
+   "text_fingerprint": "f95835817ae93af14fa2dde4d69f56ce70af0a5de864ef43aad64cd600a15860"
+  },
+  "L035": {
+   "read_on": "2026-11-19",
+   "tokens": 1436,
+   "attempts": 1,
+   "text_fingerprint": "a4d73f338dbdf7ffac3e24dcd3cdaf025100d55c974f8e41b158977ec942ca80"
+  },
+  "L036": {
+   "read_on": "2026-11-19",
+   "tokens": 1429,
+   "attempts": 1,
+   "text_fingerprint": "df438f5b7297cdaa74d5b7ce888869f749794871ee461f8b1fa98d50076b82dc"
+  },
+  "L037": {
+   "read_on": "2026-11-19",
+   "tokens": 1409,
+   "attempts": 1,
+   "text_fingerprint": "c2e1cafda8e1e41008d923009562c950d818ca7be0ed100625526f9f198381a2"
+  },
+  "L038": {
+   "read_on": "2026-11-19",
+   "tokens": 1429,
+   "attempts": 1,
+   "text_fingerprint": "03a484e18bb7aaa6d6f2029cd88060b64b6a2b545fbcf7e219ab6f04f0aa9378"
+  },
+  "L039": {
+   "read_on": "2026-11-19",
+   "tokens": 1441,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "b2d1822dbc5466435a311ae3dd40559f0964e0480d7679336d3e5f0f6c953b6d"
+  },
+  "L040": {
+   "read_on": "2026-11-19",
+   "tokens": 1412,
+   "attempts": 1,
+   "text_fingerprint": "388c05f3212b20cdaa5e1f0449cd7767765a6d35c5b877507ef646cbf5b7ea1d"
+  },
+  "L041": {
+   "read_on": "2026-11-20",
+   "tokens": 1445,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "4649fd8cd786c337c77057282f63fc78fb424f39b00e5aef90c8c569ad3f747e"
+  },
+  "L042": {
+   "read_on": "2026-11-19",
+   "tokens": 1435,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "02109c96927e94e0d4eded49da4b432facaddd36d4df15855497878ca0b6fe71"
+  },
+  "L043": {
+   "read_on": "2026-11-19",
+   "tokens": 1417,
+   "attempts": 1,
+   "text_fingerprint": "0c4aea84539a6df478531765d38de2d7bfd716af11e2274c64986657dae9394c"
+  },
+  "L044": {
+   "read_on": "2026-11-19",
+   "tokens": 1413,
+   "attempts": 1,
+   "text_fingerprint": "58a8ae49538173fd2b5fcb012f8f8aa7d14796a4c5a72eb68be96707e4f2962c"
+  },
+  "L045": {
+   "read_on": "2026-11-19",
+   "tokens": 1421,
+   "attempts": 1,
+   "text_fingerprint": "a017bdf91608912acf8f959858ddd803f1730ff94878b7599012eaee16d135dd"
+  },
+  "L046": {
+   "read_on": "2026-11-19",
+   "tokens": 1427,
+   "attempts": 1,
+   "text_fingerprint": "56d5aaa63b2b5322987fe280f0f7d2cf07848707491933395fa8a6b4693a71ea"
+  },
+  "L047": {
+   "read_on": "2026-11-19",
+   "tokens": 1423,
+   "attempts": 1,
+   "text_fingerprint": "18e998476db70c4030869f2ea39d1a3482aeca5b22c6a88a0c411e5231f14e19"
+  },
+  "L048": {
+   "read_on": "2026-11-19",
+   "tokens": 1420,
+   "attempts": 1,
+   "text_fingerprint": "447bd6de780b8065414623f345f334c68e799774467da1c91d303e6c1002f541"
+  },
+  "L049": {
+   "read_on": "2026-11-19",
+   "tokens": 1420,
+   "attempts": 1,
+   "text_fingerprint": "646c4f985e0810f1e425b244de4cfb8a0c451c9778236780f146589cee0ad876"
+  },
+  "L050": {
+   "read_on": "2026-11-19",
+   "tokens": 1425,
+   "attempts": 1,
+   "text_fingerprint": "04e8602eb7e7f160755b51f4125081d0bd5c3d82a2ce99ff26d58b90b64f0c90"
+  },
+  "L051": {
+   "read_on": "2026-11-19",
+   "tokens": 1418,
+   "attempts": 1,
+   "text_fingerprint": "6f0322764b4746b156c6d08a922b78b32342f5565ef6c2868deea777a0fec5de"
+  },
+  "L052": {
+   "read_on": "2026-11-19",
+   "tokens": 1424,
+   "attempts": 1,
+   "text_fingerprint": "db341a0df36ac2610ce7e8d9ef1e52aef34790398d892cbc4f6c733a42fb1b8a"
+  },
+  "L053": {
+   "read_on": "2026-11-19",
+   "tokens": 1425,
+   "attempts": 1,
+   "text_fingerprint": "86662f9a34b768a6d15a362d42fc435a27e2c4ba3d6dabde939cbb0b5df9f81a"
+  },
+  "L054": {
+   "read_on": "2026-11-19",
+   "tokens": 1413,
+   "attempts": 1,
+   "text_fingerprint": "0e5cceffa19a8a8f5e4ccaef9acaf887f2de55a37f3c59c227e16d626ed949ec"
+  },
+  "L055": {
+   "read_on": "2026-11-19",
+   "tokens": 1435,
+   "attempts": 1,
+   "text_fingerprint": "7d62c9df44adb560506884c944823eed5ef519d8167cefc8d405f7e5a5412c86"
+  },
+  "L056": {
+   "read_on": "2026-11-19",
+   "tokens": 1447,
+   "attempts": 1,
+   "text_fingerprint": "a0f2aabd4516519df019eebcb8eb5d2586cac0f4a6641ac619519d8bafe0f54f"
+  },
+  "L057": {
+   "read_on": "2026-11-19",
+   "tokens": 1425,
+   "attempts": 1,
+   "text_fingerprint": "ec71032ce1bc98650da5ef4544e32d147b754925d3c15b343fd105431a231308"
+  },
+  "L058": {
+   "read_on": "2026-11-19",
+   "tokens": 1426,
+   "attempts": 1,
+   "text_fingerprint": "97470ef46900e59d173eb4646c8c467e3fe14426ce042a69ffb3c767fedfa727"
+  },
+  "L059": {
+   "read_on": "2026-11-19",
+   "tokens": 1421,
+   "attempts": 1,
+   "text_fingerprint": "fa247fe235fd13b2428b5647c1e40cc36283d3b3efdb0da38b44429fc77760c7"
+  },
+  "L060": {
+   "read_on": "2026-11-19",
+   "tokens": 1426,
+   "attempts": 1,
+   "text_fingerprint": "807d2758896a826e5386ba4d3fd612b3e0ea0c50f0931f8676812c8ec7d5a9ce"
+  },
+  "L061": {
+   "read_on": "2026-11-19",
+   "tokens": 1436,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "b0d0b6d5d6c056366a8dcf7d2d1c2c35ba59bd47c2998ef2f7f1026df46796d4"
+  },
+  "L062": {
+   "read_on": "2026-11-19",
+   "tokens": 1443,
+   "attempts": 1,
+   "text_fingerprint": "a4c500eb0f4dd16cdb1eac8bdf14fa25a597e7121d09e3edfb3c1903a999526f"
+  },
+  "L063": {
+   "read_on": "2026-11-19",
+   "tokens": 1446,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "6dd1890ba3d866d046004822a2167d430e220b395cfa7465f624168038e5ad2d"
+  },
+  "L064": {
+   "read_on": "2026-11-19",
+   "tokens": 1418,
+   "attempts": 1,
+   "text_fingerprint": "319b0c7c810157b81e7746834efa6d88ae6bdbb89ce9a15df7e6de67ec0133f8"
+  },
+  "L065": {
+   "read_on": "2026-11-19",
+   "tokens": 1430,
+   "attempts": 1,
+   "text_fingerprint": "92e2325f993a467f170067fdd947f8e8b9fa75ac14bbe817502a2da927aee7b3"
+  },
+  "L066": {
+   "read_on": "2026-11-19",
+   "tokens": 1426,
+   "attempts": 1,
+   "text_fingerprint": "2475e70c9211989de799758bca267295df291449b26eed2eed105e853a06a4b9"
+  },
+  "L067": {
+   "read_on": "2026-11-19",
+   "tokens": 1416,
+   "attempts": 1,
+   "text_fingerprint": "01f39cf45b54036492c0f9135e9f32888ab5f923ac821e69e1fb51c7e51122cd"
+  },
+  "L068": {
+   "read_on": "2026-11-19",
+   "tokens": 1463,
+   "attempts": 1,
+   "text_fingerprint": "cbc1ba4ddc7e3cd1951a1c45d941a92dac09bd3a8688dd5e91c728d0ad67ba8b"
+  },
+  "L069": {
+   "read_on": "2026-11-19",
+   "tokens": 1428,
+   "attempts": 1,
+   "text_fingerprint": "518fb016e1fadbdb0aa13a976d19534f0ed13bd61c390993ffce9482024ae609"
+  },
+  "L070": {
+   "read_on": "2026-11-19",
+   "tokens": 1389,
+   "attempts": 1,
+   "text_fingerprint": "0c9c2d037efa4fe935fcc6122e67ce1bfac6eb520a059628f0ae2dd97b6e174e"
+  },
+  "L071": {
+   "read_on": "2026-11-19",
+   "tokens": 1412,
+   "attempts": 1,
+   "text_fingerprint": "50b05ebc4291dea2fa825dcd00fcd947d2296d81239b5e82971982dc6209e4cf"
+  },
+  "L072": {
+   "read_on": "2026-11-19",
+   "tokens": 1428,
+   "attempts": 1,
+   "text_fingerprint": "50b0c088ba1842878331c896b8e4e4a7025080d55fd7fb5a1431a7f3daa2008e"
+  },
+  "L073": {
+   "read_on": "2026-11-19",
+   "tokens": 1432,
+   "attempts": 1,
+   "text_fingerprint": "4276f3bde5a0ab1889150bf5b2eae38e20ecaa289d59b9780ebf99ba9fae1dd6"
+  },
+  "L074": {
+   "read_on": "2026-11-19",
+   "tokens": 1432,
+   "attempts": 1,
+   "text_fingerprint": "342fa0b341a364d32094614ce2aadd9609682967933b88bd42a030eb59f88b03"
+  },
+  "L075": {
+   "read_on": "2026-11-19",
+   "tokens": 1437,
+   "attempts": 1,
+   "text_fingerprint": "0768063b490e3b538425808c3fcb9355ef65f7b5cf23604b0e9b959b3fea27f7"
+  },
+  "L076": {
+   "read_on": "2026-11-19",
+   "tokens": 1452,
+   "attempts": 1,
+   "text_fingerprint": "f729848fb2aa429a61b52611f97267a027adf945cbaa43855d46a8e9053a8505"
+  },
+  "L077": {
+   "read_on": "2026-11-19",
+   "tokens": 1439,
+   "attempts": 1,
+   "text_fingerprint": "14eda4bcdbf3a6f763d516d2b98c50167ff5d846f03c8995520c0be3fe468607"
+  },
+  "L078": {
+   "read_on": "2026-11-19",
+   "tokens": 1437,
+   "attempts": 1,
+   "text_fingerprint": "187bcc3e9c1755b9725bdb7f92d29c8280771fa6eb6339896df7622f6c6867e7"
+  },
+  "L079": {
+   "read_on": "2026-11-19",
+   "tokens": 1441,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "35517c699bd7c4e6e7e9ea3337b52e01328defe8fba7477b05917621bf2f9d23"
+  },
+  "L080": {
+   "read_on": "2026-11-19",
+   "tokens": 1408,
+   "attempts": 1,
+   "text_fingerprint": "5e8d70ea341fc520f6f33076816968fefa1c61c64f23225cc2b6e86ad0b81a20"
+  },
+  "L081": {
+   "read_on": "2026-11-19",
+   "tokens": 1433,
+   "attempts": 1,
+   "text_fingerprint": "8124a315de1aa12c272c9186f95ecc529a5ce576797552925e730b034d52153e"
+  },
+  "L082": {
+   "read_on": "2026-11-19",
+   "tokens": 1433,
+   "attempts": 1,
+   "text_fingerprint": "fbd5ee4be95f59f5ca6c0fd693004b74001afe86768d8e35539dab14ab4cce8e"
+  },
+  "L083": {
+   "read_on": "2026-11-19",
+   "tokens": 1435,
+   "attempts": 1,
+   "text_fingerprint": "71dd9ca368244b4074b7e0e80f7e2db7a3a46e897607457bd891b2ba7f13d376"
+  },
+  "L084": {
+   "read_on": "2026-11-19",
+   "tokens": 1406,
+   "attempts": 1,
+   "text_fingerprint": "1ce8e9a862a3b14628a4a489ab9f2b5e78ed478fb4cb6eb0f3eb5157fd1e7a8c"
+  },
+  "L085": {
+   "read_on": "2026-11-19",
+   "tokens": 1417,
+   "attempts": 1,
+   "text_fingerprint": "cb3f8531a553f8ba23dfe607f618e6ce08c42b0bbe1cc30c24cba4ce1178a6e2"
+  },
+  "L086": {
+   "read_on": "2026-11-19",
+   "tokens": 1436,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "252792fadab1a634415535c70d29a4fcac59dfb2c81aa327121d58d4a10b961e"
+  },
+  "L087": {
+   "read_on": "2026-11-19",
+   "tokens": 1454,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "833d3a4df668bf0ca638f533f633efa9b974ad9e3c51761b48eeaca661c44833"
+  },
+  "L088": {
+   "read_on": "2026-11-19",
+   "tokens": 1438,
+   "attempts": 1,
+   "text_fingerprint": "b98aa207c9850fa8223329a39616e936461593e90b69ed43f8f75a41c2190b76"
+  },
+  "L089": {
+   "read_on": "2026-11-19",
+   "tokens": 1427,
+   "attempts": 1,
+   "text_fingerprint": "2e7af7fa3b2298922442401ed6acde58e70ac01625c970f8bfd170835ec66a52"
+  },
+  "L090": {
+   "read_on": "2026-11-19",
+   "tokens": 1416,
+   "attempts": 1,
+   "text_fingerprint": "561414349fa8dbb7664734fa1883a6cecb2616db421abf3fd35db1f1a3d82594"
+  },
+  "L091": {
+   "read_on": "2026-11-19",
+   "tokens": 1449,
+   "attempts": 1,
+   "reread": true,
+   "text_fingerprint": "a99f9c3ff0fc87396d699f0397292f43fba2432da17bb502f06f90a39d4928b4"
+  },
+  "L092": {
+   "read_on": "2026-11-19",
+   "tokens": 1428,
+   "attempts": 1,
+   "text_fingerprint": "808b94acde6d4ff089d4cc6b20ef0681b9cde7ba32ffc2d64e44124090f923b1"
+  },
+  "L093": {
+   "read_on": "2026-11-19",
+   "tokens": 1425,
+   "attempts": 1,
+   "text_fingerprint": "7083088c56633ed3944c44ae064a3fade07b6c92743f9b9bde5a6eb688c56a4c"
+  },
+  "L094": {
+   "read_on": "2026-11-19",
+   "tokens": 1444,
+   "attempts": 1,
+   "text_fingerprint": "a7149e48651cea0d9eeb2b122d1c1a053847976dc66693fa0538e35442298f32"
+  },
+  "L095": {
+   "read_on": "2026-11-19",
+   "tokens": 1421,
+   "attempts": 1,
+   "text_fingerprint": "b190ce54d89a2abc4da595ee99aa390d30a733103ca7b3a835dd9c69ffee1311"
+  },
+  "L096": {
+   "read_on": "2026-11-19",
+   "tokens": 1430,
+   "attempts": 1,
+   "text_fingerprint": "50a44c832ed2b8d4b87052cc51b455946697ed4144deb0211ba6d1a9f200f411"
+  },
+  "L097": {
+   "read_on": "2026-11-19",
+   "tokens": 1437,
+   "attempts": 1,
+   "text_fingerprint": "4a64638780d21005779475b8853465b5771203e40a1310d7773c9b9a9000368e"
+  },
+  "L098": {
+   "read_on": "2026-11-19",
+   "tokens": 1425,
+   "attempts": 1,
+   "text_fingerprint": "21eaac5bcdc247ee0f12cd8c4feffe50444569aa607771302f73fbbaa524add7"
+  },
+  "L099": {
+   "read_on": "2026-11-19",
+   "tokens": 1423,
+   "attempts": 1,
+   "text_fingerprint": "f494afdd95f441e796b0359b6f319685cc3d4071baae36330db95b28feeb3fcb"
+  },
+  "L100": {
+   "read_on": "2026-11-19",
+   "tokens": 1431,
+   "attempts": 1,
+   "text_fingerprint": "76ea144bf5dad88f6586eee891ba49a7f5c21f0b61ad198c0ea21c0642733625"
+  }
+ }
+}

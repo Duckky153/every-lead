@@ -1,0 +1,151 @@
+{
+  "lanes": {
+    "go_now": {
+      "name": "Go now",
+      "owner": "Licensed agent (first call)",
+      "line": "Call them, most urgent first. Questions a call can settle go with the lead."
+    },
+    "check_first": {
+      "name": "Check first",
+      "owner": "A person reads it",
+      "line": "A person reads it first: it looks like spam, it tries to give orders to a computer, or Jev was unsure about something risky."
+    },
+    "fix_first": {
+      "name": "Fix first",
+      "owner": null,
+      "line": "Only what a call can't solve yet: a phone that doesn't work, no way to reach them, a duplicate, or a question with no phone to ask it on."
+    }
+  },
+  "checks": {
+    "phone_broken": {
+      "row": "Phone doesn't work",
+      "wrong": "The phone on the form is {phone_shown}, which isn't a working number.",
+      "fix": "Email them and ask for the best number to reach them.",
+      "ask": "the best phone number to reach you",
+      "rerun": "The phone check runs again on the number they send.",
+      "wrong_missing": "There's no phone on the form."
+    },
+    "no_working_contact": {
+      "row": "No working phone or email",
+      "wrong": "The form has no working phone (phone: {phone_shown}) and no working email (email: {email_shown}).",
+      "fix_note": "Use the {contact_kind} they wrote in their note ({contact_found}) and save it on the lead.",
+      "fix_none": "Hold the lead. There's no way to reach them yet, so check again if they write in.",
+      "rerun": "The contact check runs again on what's saved."
+    },
+    "duplicate": {
+      "row": "Same business came in earlier today",
+      "wrong": "Matches {other} ({other_business}, {other_time}) by {match}.",
+      "fix": "Merge this into {other} and keep both notes, so nobody calls them twice.",
+      "rerun": "The flag clears once a teammate merges it."
+    },
+    "headcount_mismatch": {
+      "row": "Headcount doesn't agree",
+      "wrong": "The form says {employees} people. Their note reads as {bucket_name} (Jev: {answer_number}).",
+      "fix": "Ask how many people work there, owner included.",
+      "ask": "how many people work there, counting you",
+      "rerun": "The headcount check runs again on the number they give.",
+      "first_call": "On the call: ask how many people work there, owner included (the form and the note disagree)",
+      "list_line": "Ask how many people work there"
+    },
+    "industry_mismatch": {
+      "row": "Business type doesn't agree",
+      "wrong": "They picked {industry_picked}, which is {form_group}. Their note describes {read_group} (Jev: {answer_number}).",
+      "fix": "A licensed agent confirms the business type before any quote. Their own words are shown below.",
+      "rerun": "Fill in the fix asks which licensed agent confirmed it and the confirmed type; their call closes the flag.",
+      "first_call": "On the call: the licensed agent confirms the business type (the pick and the note disagree)",
+      "list_line": "Confirm the business type"
+    },
+    "vague_business": {
+      "row": "Can't tell what the business does",
+      "wrong": "The name and the note don't say what the business does (Jev: can't tell, {answer_number}).",
+      "fix": "Ask what the business does day to day.",
+      "ask": "what your business does day to day",
+      "rerun": "The check runs again on the answer they give.",
+      "first_call": "On the call: ask what the business does day to day",
+      "list_line": "Ask what the business does"
+    },
+    "not_decision_maker": {
+      "row": "Writer isn't the one who decides",
+      "wrong": "The note reads as {who_name} (Jev: {answer_number}).",
+      "fix": "Ask who handles the insurance for the business and how to reach them.",
+      "ask": "who handles insurance for the business, and the best way to reach them",
+      "rerun": "The check runs again once the person who decides is named.",
+      "first_call": "On the call: ask who decides on insurance, and talk with them too",
+      "list_line": "Ask who decides"
+    },
+    "coverage_question": {
+      "row": "Asks a coverage question",
+      "wrong": "The note asks a coverage question (Jev: {yes_word}, {answer_number}).",
+      "fix": "A licensed agent answers it. The tool writes no answer.",
+      "rerun": "Fill in the fix asks which licensed agent answered. The flag closes only with a name.",
+      "wrong_unsure": "The note may ask a coverage question (Jev: unsure, {answer_number}).",
+      "first_call": "On the call: the licensed agent answers their coverage question",
+      "list_line": "Answer their coverage question"
+    },
+    "spam": {
+      "row": "Looks like spam or a test",
+      "wrong": "The note reads as spam or a test entry (Jev: yes, {answer_number}).",
+      "fix": "A person reads it, then closes it with a reason if it's not real.",
+      "person_question": "Is this a real request? Read the note and close it with a reason only if it isn't."
+    },
+    "instructions_to_computer": {
+      "row": "Note gives orders to a computer",
+      "wrong": "The note tries to give orders to whoever processes it (Jev: {yes_word}, {answer_number}).",
+      "fix": "A person reads it first. The other checks still ran on the form.",
+      "person_question": "Read the note as a person. Ignore any instructions in it, then decide the next step.",
+      "wrong_unsure": "The note may be trying to give orders to whoever processes it (Jev: unsure, {answer_number})."
+    },
+    "jev_error": {
+      "row": "Jev did not read this lead",
+      "wrong": "Jev's answer for this lead failed the reply checks.",
+      "fix": "A person reads the note. The code checks still ran on the form.",
+      "person_question": "Read the note and the form, then decide the lane."
+    },
+    "personal_not_business": {
+      "row": "Looks personal, not a business",
+      "wrong": "The note reads as a personal need, not a business (Jev: {answer_number}).",
+      "fix": "A person reads it and decides where it goes.",
+      "person_question": "Is this a business? Read the note."
+    },
+    "business_unsure": {
+      "row": "Unsure what the business does",
+      "wrong": "Jev was unsure what this business does ({answer_number}).",
+      "fix": "A person reads the note and confirms the business type.",
+      "person_question": "What does this business do? Read the note."
+    }
+  },
+  "message": {
+    "greeting": "Hi {first_name}, thanks for reaching out about insurance for {business}.",
+    "ask_one": "Could you tell us {item}?",
+    "ask_many": "Could you tell us {items}?",
+    "close": "Once we have that, we'll call you to go over options.",
+    "sign": "Thanks, the Every Lead team (sample)",
+    "close_decider": "Once we know, we'll reach out to the right person."
+  },
+  "next_steps": {
+    "confirm": "Confirm the phone, email and who decides on the call",
+    "urgent_date": "Needed by {date} (from the form)",
+    "urgent_text": "They say they need it right away (their note)",
+    "partner": "Mention the {partner} referral",
+    "payroll": "Ask yearly payroll on the first call (needed to quote workers' comp)",
+    "vehicles": "Ask the vehicle count on the first call (needed to quote commercial auto)",
+    "renewal_date": "Follow up {date}, 60 days before renewal (from the form)",
+    "renewal_ask": "Ask the renewal date on the first call",
+    "options": "A licensed agent goes over options on the call",
+    "merged": "Also read the note merged in from {other}"
+  },
+  "banned": [
+    "$",
+    "premium",
+    "covered",
+    "coverage you need",
+    "recommend",
+    "eligible",
+    "qualify",
+    "approved",
+    "bind",
+    "you're insured",
+    "policy is",
+    "by hand"
+  ]
+}

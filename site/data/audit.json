@@ -1,0 +1,35 @@
+{
+ "summary": {
+  "auditor": "Codex (OpenAI), a different model family from the writer (Claude)",
+  "leads": 20,
+  "answers": 140,
+  "agreement_pct": 100.0,
+  "problem_lists_agreed": 20,
+  "disputes": 0,
+  "date": "2026-11-19",
+  "how": "Given the written rules, the form fields and the note, never the keys; 20 scored leads drawn at random (seed 20261119). Raw agreement saved before anything was settled.",
+  "raw_labels": "kept privately; the agreement numbers above were computed before anything was settled"
+ },
+ "ids": [
+  "L003",
+  "L007",
+  "L008",
+  "L024",
+  "L028",
+  "L033",
+  "L036",
+  "L047",
+  "L057",
+  "L062",
+  "L067",
+  "L073",
+  "L078",
+  "L079",
+  "L086",
+  "L087",
+  "L089",
+  "L091",
+  "L092",
+  "L099"
+ ]
+}

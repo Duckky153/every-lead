@@ -1,0 +1,427 @@
+{
+ "L001": [],
+ "L002": [
+  {
+   "kind": "spam",
+   "owner": "A person reads it"
+  }
+ ],
+ "L003": [],
+ "L004": [],
+ "L005": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L006": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "L007": [],
+ "L008": [],
+ "L009": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "L010": [],
+ "L011": [],
+ "L012": [],
+ "L013": [],
+ "L014": [
+  {
+   "kind": "vague_business",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L015": [
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L016": [
+  {
+   "kind": "instructions_to_computer",
+   "owner": "A person reads it"
+  }
+ ],
+ "L017": [],
+ "L018": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "L019": [],
+ "L020": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L021": [],
+ "L022": [],
+ "L023": [],
+ "L024": [],
+ "L025": [],
+ "L026": [
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ],
+ "L027": [
+  {
+   "kind": "headcount_mismatch",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L028": [
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L029": [],
+ "L030": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L031": [],
+ "L032": [],
+ "L033": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "L034": [],
+ "L035": [
+  {
+   "kind": "instructions_to_computer",
+   "owner": "A person reads it"
+  }
+ ],
+ "L036": [
+  {
+   "kind": "headcount_mismatch",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L037": [],
+ "L038": [
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ],
+ "L039": [],
+ "L040": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L041": [],
+ "L042": [
+  {
+   "kind": "spam",
+   "owner": "A person reads it"
+  }
+ ],
+ "L043": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L044": [],
+ "L045": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "L046": [],
+ "L047": [],
+ "L048": [],
+ "L049": [],
+ "L050": [],
+ "L051": [
+  {
+   "kind": "headcount_mismatch",
+   "owner": "Ask the customer"
+  },
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ],
+ "L052": [
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L053": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L054": [],
+ "L055": [
+  {
+   "kind": "no_working_contact:in_note",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L056": [],
+ "L057": [],
+ "L058": [],
+ "L059": [
+  {
+   "kind": "no_working_contact:in_note",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L060": [],
+ "L061": [],
+ "L062": [],
+ "L063": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L064": [],
+ "L065": [],
+ "L066": [],
+ "L067": [],
+ "L068": [],
+ "L069": [],
+ "L070": [],
+ "L071": [],
+ "L072": [],
+ "L073": [
+  {
+   "kind": "headcount_mismatch",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L074": [],
+ "L075": [],
+ "L076": [],
+ "L077": [
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ],
+ "L078": [],
+ "L079": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L080": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L081": [],
+ "L082": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  },
+  {
+   "kind": "vague_business",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L083": [
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L084": [
+  {
+   "kind": "vague_business",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L085": [],
+ "L086": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "L087": [],
+ "L088": [],
+ "L089": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  },
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ],
+ "L090": [
+  {
+   "kind": "no_working_contact:none",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L091": [],
+ "L092": [],
+ "L093": [],
+ "L094": [],
+ "L095": [
+  {
+   "kind": "vague_business",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L096": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  },
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "L097": [],
+ "L098": [
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ],
+ "L099": [],
+ "L100": [],
+ "P001": [],
+ "P002": [],
+ "P003": [],
+ "P004": [],
+ "P005": [
+  {
+   "kind": "headcount_mismatch",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P006": [
+  {
+   "kind": "headcount_mismatch",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P007": [
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  },
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P008": [],
+ "P009": [
+  {
+   "kind": "vague_business",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P010": [],
+ "P011": [
+  {
+   "kind": "no_working_contact:in_note",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "P012": [],
+ "P013": [
+  {
+   "kind": "spam",
+   "owner": "A person reads it"
+  }
+ ],
+ "P014": [],
+ "P015": [],
+ "P016": [
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P017": [],
+ "P018": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "P019": [],
+ "P020": [],
+ "P021": [
+  {
+   "kind": "vague_business",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P022": [
+  {
+   "kind": "instructions_to_computer",
+   "owner": "A person reads it"
+  }
+ ],
+ "P023": [
+  {
+   "kind": "not_decision_maker",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P024": [],
+ "P025": [],
+ "P026": [
+  {
+   "kind": "phone_broken",
+   "owner": "Ask the customer"
+  }
+ ],
+ "P027": [],
+ "P028": [
+  {
+   "kind": "industry_mismatch",
+   "owner": "Licensed person"
+  }
+ ],
+ "P029": [
+  {
+   "kind": "duplicate",
+   "owner": "Teammate can fix"
+  }
+ ],
+ "P030": [
+  {
+   "kind": "coverage_question",
+   "owner": "Licensed person"
+  }
+ ]
+}

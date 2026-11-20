@@ -1,0 +1,67 @@
+{
+  "day": "2026-11-19",
+  "yes_at_or_above": 0.8,
+  "no_at_or_below": 0.2,
+  "choice_counts_at": 0.7,
+  "right_away_days": 7,
+  "renewal_follow_up_days": 60,
+  "employee_buckets": {
+    "owner_only": [
+      1,
+      4
+    ],
+    "2_to_10": [
+      1,
+      13
+    ],
+    "11_to_50": [
+      8,
+      53
+    ],
+    "over_50": [
+      48,
+      1000000
+    ]
+  },
+  "industry_group": {
+    "Roofing": "building_trades",
+    "Plumbing or HVAC": "building_trades",
+    "Electrical": "building_trades",
+    "General contractor": "building_trades",
+    "Landscaping or lawn care": "landscaping_outdoor",
+    "Cleaning or janitorial": "cleaning",
+    "Restaurant or cafe": "food_drink",
+    "Food truck or catering": "food_drink",
+    "Retail store": "retail_shop",
+    "Professional services (consulting, accounting)": "office_professional",
+    "Salon, barber or spa": "personal_care",
+    "Auto repair": "auto_repair",
+    "Trucking or delivery": "transport_delivery",
+    "Software, design or marketing": "tech_creative"
+  },
+  "group_names": {
+    "building_trades": "building trades",
+    "landscaping_outdoor": "landscaping and outdoor work",
+    "cleaning": "cleaning",
+    "food_drink": "food and drink",
+    "retail_shop": "a retail shop",
+    "office_professional": "office and professional services",
+    "personal_care": "personal care",
+    "auto_repair": "auto repair",
+    "transport_delivery": "transport and delivery",
+    "tech_creative": "tech and creative work",
+    "personal_not_business": "a personal need, not a business",
+    "cannot_tell": "can't tell"
+  },
+  "email_pattern": "^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$",
+  "contact_in_text": {
+    "phone": "\\(?\\b\\d{3}\\)?[-. ]?\\d{3}[-. ]?\\d{4}\\b",
+    "email": "[\\w.+-]+@example\\.(com|net|org)"
+  },
+  "owner_priority": [
+    "Licensed person",
+    "Ask the customer",
+    "Teammate can fix"
+  ],
+  "phone_rule": "A phone works if it has 10 digits (or 11 starting with 1) and no letters, in any format (checked in engine.js)."
+}

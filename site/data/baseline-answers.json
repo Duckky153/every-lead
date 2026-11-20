@@ -1,0 +1,3905 @@
+{
+ "note": "Simple keyword rules plus the form's role box, written after seeing the leads: a generous yardstick, not a fair contest.",
+ "answers": {
+  "L001": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L002": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 1
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L003": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L004": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L005": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L006": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L007": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L008": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L009": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L010": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L011": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L012": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L013": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L014": {
+   "what_business": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L015": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 1,
+    "probabilities": {
+     "staff_sent_by_someone_else": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L016": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 1
+   }
+  },
+  "L017": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L018": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L019": {
+   "what_business": {
+    "choice": "personal_care",
+    "confidence": 1,
+    "probabilities": {
+     "personal_care": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L020": {
+   "what_business": {
+    "choice": "cleaning",
+    "confidence": 1,
+    "probabilities": {
+     "cleaning": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L021": {
+   "what_business": {
+    "choice": "office_professional",
+    "confidence": 1,
+    "probabilities": {
+     "office_professional": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L022": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L023": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L024": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L025": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L026": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 1
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "owner_only",
+    "confidence": 1,
+    "probabilities": {
+     "owner_only": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L027": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "11_to_50",
+    "confidence": 1,
+    "probabilities": {
+     "11_to_50": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L028": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "someone_outside",
+    "confidence": 1,
+    "probabilities": {
+     "someone_outside": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L029": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L030": {
+   "what_business": {
+    "choice": "cleaning",
+    "confidence": 1,
+    "probabilities": {
+     "cleaning": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "owner_only",
+    "confidence": 1,
+    "probabilities": {
+     "owner_only": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L031": {
+   "what_business": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L032": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L033": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L034": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L035": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 1
+   }
+  },
+  "L036": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L037": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L038": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L039": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L040": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L041": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L042": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 1
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L043": {
+   "what_business": {
+    "choice": "cleaning",
+    "confidence": 1,
+    "probabilities": {
+     "cleaning": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L044": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L045": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L046": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "owner_only",
+    "confidence": 1,
+    "probabilities": {
+     "owner_only": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L047": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L048": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L049": {
+   "what_business": {
+    "choice": "personal_care",
+    "confidence": 1,
+    "probabilities": {
+     "personal_care": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L050": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L051": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 1
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "owner_only",
+    "confidence": 1,
+    "probabilities": {
+     "owner_only": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L052": {
+   "what_business": {
+    "choice": "office_professional",
+    "confidence": 1,
+    "probabilities": {
+     "office_professional": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 1,
+    "probabilities": {
+     "staff_sent_by_someone_else": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L053": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L054": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L055": {
+   "what_business": {
+    "choice": "cleaning",
+    "confidence": 1,
+    "probabilities": {
+     "cleaning": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L056": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "11_to_50",
+    "confidence": 1,
+    "probabilities": {
+     "11_to_50": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L057": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L058": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L059": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L060": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L061": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L062": {
+   "what_business": {
+    "choice": "office_professional",
+    "confidence": 1,
+    "probabilities": {
+     "office_professional": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L063": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L064": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L065": {
+   "what_business": {
+    "choice": "personal_care",
+    "confidence": 1,
+    "probabilities": {
+     "personal_care": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L066": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L067": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L068": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L069": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L070": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L071": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L072": {
+   "what_business": {
+    "choice": "cleaning",
+    "confidence": 1,
+    "probabilities": {
+     "cleaning": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "owner_only",
+    "confidence": 1,
+    "probabilities": {
+     "owner_only": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L073": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "11_to_50",
+    "confidence": 1,
+    "probabilities": {
+     "11_to_50": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L074": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L075": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L076": {
+   "what_business": {
+    "choice": "office_professional",
+    "confidence": 1,
+    "probabilities": {
+     "office_professional": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L077": {
+   "what_business": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 1
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L078": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L079": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L080": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L081": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L082": {
+   "what_business": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L083": {
+   "what_business": {
+    "choice": "personal_care",
+    "confidence": 1,
+    "probabilities": {
+     "personal_care": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "someone_outside",
+    "confidence": 1,
+    "probabilities": {
+     "someone_outside": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L084": {
+   "what_business": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L085": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "owner_only",
+    "confidence": 1,
+    "probabilities": {
+     "owner_only": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L086": {
+   "what_business": {
+    "choice": "office_professional",
+    "confidence": 1,
+    "probabilities": {
+     "office_professional": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L087": {
+   "what_business": {
+    "choice": "landscaping_outdoor",
+    "confidence": 1,
+    "probabilities": {
+     "landscaping_outdoor": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "has_policy_renewing_later",
+    "confidence": 1,
+    "probabilities": {
+     "has_policy_renewing_later": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L088": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L089": {
+   "what_business": {
+    "choice": "food_drink",
+    "confidence": 1,
+    "probabilities": {
+     "food_drink": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 1
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L090": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L091": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L092": {
+   "what_business": {
+    "choice": "cleaning",
+    "confidence": 1,
+    "probabilities": {
+     "cleaning": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L093": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L094": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L095": {
+   "what_business": {
+    "choice": "cannot_tell",
+    "confidence": 1,
+    "probabilities": {
+     "cannot_tell": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L096": {
+   "what_business": {
+    "choice": "building_trades",
+    "confidence": 1,
+    "probabilities": {
+     "building_trades": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "staff_sent_by_someone_else",
+    "confidence": 1,
+    "probabilities": {
+     "staff_sent_by_someone_else": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L097": {
+   "what_business": {
+    "choice": "personal_care",
+    "confidence": 1,
+    "probabilities": {
+     "personal_care": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L098": {
+   "what_business": {
+    "choice": "retail_shop",
+    "confidence": 1,
+    "probabilities": {
+     "retail_shop": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L099": {
+   "what_business": {
+    "choice": "auto_repair",
+    "confidence": 1,
+    "probabilities": {
+     "auto_repair": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "right_away",
+    "confidence": 1,
+    "probabilities": {
+     "right_away": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "2_to_10",
+    "confidence": 1,
+    "probabilities": {
+     "2_to_10": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  },
+  "L100": {
+   "what_business": {
+    "choice": "tech_creative",
+    "confidence": 1,
+    "probabilities": {
+     "tech_creative": 1
+    }
+   },
+   "who_is_writing": {
+    "choice": "owner_or_officer",
+    "confidence": 1,
+    "probabilities": {
+     "owner_or_officer": 1
+    }
+   },
+   "asks_coverage_question": {
+    "noul": 0
+   },
+   "timing": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "employees_in_text": {
+    "choice": "not_stated",
+    "confidence": 1,
+    "probabilities": {
+     "not_stated": 1
+    }
+   },
+   "spam_or_test": {
+    "noul": 0
+   },
+   "instructions_in_text": {
+    "noul": 0
+   }
+  }
+ }
+}

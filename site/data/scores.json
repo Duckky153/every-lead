@@ -1,0 +1,201 @@
+{
+ "note": "Scored on planted, made-up problems. Real accuracy needs real leads.",
+ "run": {
+  "model": "jev-1.14.0",
+  "date": "2026-11-19",
+  "questions": "el-v1"
+ },
+ "lanes": {
+  "total": 100,
+  "go_now": 81,
+  "go_now_with_questions": 21,
+  "check_first": 6,
+  "fix_first": 13,
+  "merged": 0,
+  "held": 1,
+  "dropped_by_tool": 0,
+  "closed_by_person": 0
+ },
+ "code": {
+  "caught": 15,
+  "total": 15
+ },
+ "jev": {
+  "caught": 28,
+  "total": 29
+ },
+ "missed": [
+  {
+   "id": "L083",
+   "kind": "not_decision_maker",
+   "found_by": "jev",
+   "lane": "go_now",
+   "jev_answer": {
+    "question": "who_is_writing",
+    "answer": "unsure",
+    "leaning": "staff_sent_by_someone_else",
+    "number": 0.29
+   }
+  }
+ ],
+ "missed_in_go_now": 1,
+ "false_alarms": [
+  {
+   "id": "L030",
+   "check": "coverage_question",
+   "found_by": "jev",
+   "lane": "check_first"
+  }
+ ],
+ "false_alarms_code": 0,
+ "false_alarms_jev": 1,
+ "unsure_extra": [
+  {
+   "id": "L030",
+   "check": "instructions_to_computer",
+   "lane": "check_first"
+  },
+  {
+   "id": "L053",
+   "check": "instructions_to_computer",
+   "lane": "check_first"
+  },
+  {
+   "id": "L060",
+   "check": "coverage_question",
+   "lane": "go_now"
+  },
+  {
+   "id": "L079",
+   "check": "business_unsure",
+   "lane": "fix_first"
+  }
+ ],
+ "slowed": [],
+ "unsure_planted": [
+  {
+   "id": "L030",
+   "check": "instructions_to_computer",
+   "lane": "check_first"
+  },
+  {
+   "id": "L053",
+   "check": "instructions_to_computer",
+   "lane": "check_first"
+  },
+  {
+   "id": "L079",
+   "check": "business_unsure",
+   "lane": "fix_first"
+  }
+ ],
+ "lead_level": {
+  "same": 98,
+  "total": 100,
+  "differ": [
+   {
+    "id": "L030",
+    "got": "check_first",
+    "want": "fix_first"
+   },
+   {
+    "id": "L053",
+    "got": "check_first",
+    "want": "fix_first"
+   }
+  ]
+ },
+ "reading": {
+  "what_business": {
+   "right": 99,
+   "confident_wrong": 0,
+   "unsure": 1,
+   "wrong_ids": []
+  },
+  "who_is_writing": {
+   "right": 61,
+   "confident_wrong": 9,
+   "unsure": 30,
+   "wrong_ids": [
+    "L007",
+    "L024",
+    "L033",
+    "L045",
+    "L050",
+    "L057",
+    "L073",
+    "L092",
+    "L093"
+   ]
+  },
+  "asks_coverage_question": {
+   "right": 98,
+   "confident_wrong": 1,
+   "unsure": 1,
+   "wrong_ids": [
+    "L030"
+   ]
+  },
+  "timing": {
+   "right": 84,
+   "confident_wrong": 0,
+   "unsure": 16,
+   "wrong_ids": []
+  },
+  "employees_in_text": {
+   "right": 96,
+   "confident_wrong": 0,
+   "unsure": 4,
+   "wrong_ids": []
+  },
+  "spam_or_test": {
+   "right": 95,
+   "confident_wrong": 0,
+   "unsure": 5,
+   "wrong_ids": []
+  },
+  "instructions_in_text": {
+   "right": 98,
+   "confident_wrong": 0,
+   "unsure": 2,
+   "wrong_ids": []
+  }
+ },
+ "reading_totals": {
+  "right": 631,
+  "confident_wrong": 10,
+  "unsure": 59,
+  "answers": 700
+ },
+ "clean_leads": 60,
+ "reading_totals_locked_key": {
+  "right": 630,
+  "confident_wrong": 11,
+  "unsure": 59,
+  "answers": 700
+ },
+ "baseline": {
+  "note": "Simple keyword rules plus the form's role box, written after seeing the leads: a generous yardstick, not a fair contest.",
+  "jev": {
+   "caught": 25,
+   "total": 29
+  },
+  "false_alarms": 30,
+  "reading_totals": {
+   "right": 586,
+   "confident_wrong": 114,
+   "unsure": 0,
+   "answers": 700
+  },
+  "lead_level": {
+   "same": 98,
+   "total": 100
+  }
+ },
+ "lead_level_original_rule": {
+  "jev": 96,
+  "baseline": 68,
+  "total": 100,
+  "engine_commit": "658fd8e"
+ }
+}

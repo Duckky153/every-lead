@@ -1,0 +1,152 @@
+{
+  "fields": {
+    "phone": "Phone",
+    "email": "Email",
+    "business": "Business",
+    "state": "State",
+    "employees": "People (form)",
+    "industry_picked": "Business type picked",
+    "what_they_wrote": "What they wrote"
+  },
+  "checks": [
+    {
+      "id": "phone_broken",
+      "name": "Phone works",
+      "found_by": "code",
+      "kind": "phone_bad_email_ok",
+      "owner": "Ask the customer",
+      "evidence": [
+        "phone",
+        "email"
+      ]
+    },
+    {
+      "id": "no_working_contact",
+      "name": "Some way to reach them",
+      "found_by": "code",
+      "kind": "no_contact",
+      "owner_if_note_has_contact": "Teammate can fix",
+      "owner": "Ask the customer",
+      "evidence": [
+        "phone",
+        "email",
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "duplicate",
+      "name": "Not already in today",
+      "found_by": "code",
+      "kind": "duplicate",
+      "owner": "Teammate can fix",
+      "evidence": [
+        "business",
+        "phone",
+        "email",
+        "state"
+      ]
+    },
+    {
+      "id": "headcount_mismatch",
+      "name": "Headcount agrees",
+      "found_by": "jev",
+      "kind": "bucket_differs",
+      "question": "employees_in_text",
+      "owner": "Ask the customer",
+      "evidence": [
+        "employees",
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "industry_mismatch",
+      "name": "Business type agrees",
+      "found_by": "jev",
+      "kind": "group_differs",
+      "question": "what_business",
+      "owner": "Licensed person",
+      "evidence": [
+        "industry_picked",
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "vague_business",
+      "name": "Business is described",
+      "found_by": "jev",
+      "kind": "answer_is",
+      "question": "what_business",
+      "answer": "cannot_tell",
+      "owner": "Ask the customer",
+      "evidence": [
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "not_decision_maker",
+      "name": "Writer can decide",
+      "found_by": "jev",
+      "kind": "answer_in",
+      "question": "who_is_writing",
+      "answers": [
+        "staff_sent_by_someone_else",
+        "someone_outside"
+      ],
+      "owner": "Ask the customer",
+      "evidence": [
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "coverage_question",
+      "name": "No coverage question",
+      "found_by": "jev",
+      "kind": "yes_or_unsure",
+      "question": "asks_coverage_question",
+      "owner": "Licensed person",
+      "evidence": [
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "spam",
+      "name": "Real request",
+      "found_by": "jev",
+      "kind": "yes",
+      "question": "spam_or_test",
+      "owner": "A person reads it",
+      "evidence": [
+        "business",
+        "what_they_wrote"
+      ]
+    },
+    {
+      "id": "instructions_to_computer",
+      "name": "No orders to a computer",
+      "found_by": "jev",
+      "kind": "yes_or_unsure",
+      "question": "instructions_in_text",
+      "owner": "A person reads it",
+      "evidence": [
+        "what_they_wrote"
+      ]
+    }
+  ],
+  "person_only": [
+    {
+      "id": "jev_error",
+      "name": "Jev read it",
+      "owner": "A person reads it"
+    },
+    {
+      "id": "personal_not_business",
+      "name": "A business, not personal",
+      "owner": "A person reads it"
+    },
+    {
+      "id": "business_unsure",
+      "name": "Business type is clear",
+      "owner": "A person reads it"
+    }
+  ]
+}

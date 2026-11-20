@@ -1,0 +1,113 @@
+{
+ "note": "Every change to a locked file after the lock, in order, each with fingerprints before and after. Rebuilt once from git history in round 3 (2026-11-20) and its reasons reworded in round 4 to keep private words out; entries are added at the end, never removed.",
+ "changes": [
+  {
+   "file": "data/notes.json",
+   "before": "59c8c36b3f3b1e9d3f57d41d42a700baf2e879899830bc8903de4bd18f926ce1",
+   "after": "bebeb606a5a269366b541044dbfb4cefc4479870826babc19ea470838cb6d075",
+   "date": "2026-11-19",
+   "step": "Review round 1",
+   "reason": "L008, L021, L087 and L091 named the company this build is for in the note; the name became 'you' (Jev re-read those 4). L030's who_is_writing key corrected from cannot_tell to owner_or_officer ('just me and my sister' run it).",
+   "moved_score_toward_jev": true
+  },
+  {
+   "file": "data/notes.json",
+   "before": "bebeb606a5a269366b541044dbfb4cefc4479870826babc19ea470838cb6d075",
+   "after": "3b91ebde8a1da147cdb150385bf8c9bc9c239241b51ad889f840dce36473a77f",
+   "date": "2026-11-19",
+   "step": "Review round 2",
+   "reason": "L002's private 'why' note no longer names that company. No answer or text Jev reads changed.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "data/notes.json",
+   "before": "3b91ebde8a1da147cdb150385bf8c9bc9c239241b51ad889f840dce36473a77f",
+   "after": "cc0dec49723b58a12c3a8181f33f1687b07e952aac09837b6d50b115b3207a1c",
+   "date": "2026-11-20",
+   "step": "Review round 3",
+   "reason": "Contacts sharing names with famous people renamed (L022, L039, L056, L063, L069, L072, L092); real company names replaced (Keystone Payroll, RankRocket, RankLift); L063 and L086 now name the same town as their originals; the old internal owner name for no-customer fixes renamed 'Teammate can fix'. Jev re-read the 7 scored leads whose text changed.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "site/data/leads.json",
+   "before": "d2f668537613dc2217d78ca6c04b405b2b55f1c43d13026f99d6309d5a0fb10d",
+   "after": "e03db1c7a37391543a9048aa9d06514f336591db7bc151dd06e7247fb37a4fde",
+   "date": "2026-11-19",
+   "step": "Review round 1",
+   "reason": "The same four note edits; the seeded city column removed (it contradicted towns named in many notes). Jev never sees the city.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "site/data/leads.json",
+   "before": "e03db1c7a37391543a9048aa9d06514f336591db7bc151dd06e7247fb37a4fde",
+   "after": "1c5d6f6f43261384d01da59a776b23d336f7cddf0400fc3a17fe23788912339a",
+   "date": "2026-11-20",
+   "step": "Review round 3",
+   "reason": "The same round-3 renames and town fixes; emails follow the renamed contacts.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "site/data/reading-key.json",
+   "before": "5494ed9350c81790251828d95b437a8ec30d06fc3274db755bf432f24c2cb57a",
+   "after": "a5f3b50eb37bb9859bb1cd51e99073c98ba5128086ed671d170bec33f7c751fe",
+   "date": "2026-11-19",
+   "step": "Review round 1",
+   "reason": "L030 who_is_writing: cannot_tell -> owner_or_officer (the key was wrong).",
+   "moved_score_toward_jev": true,
+   "key_changes": [
+    {
+     "lead": "L030",
+     "question": "who_is_writing",
+     "locked": "cannot_tell",
+     "now": "owner_or_officer"
+    }
+   ],
+   "effect": "Jev's reading score 631 -> 632 of 700; Jev-read problems unchanged (28 of 29)."
+  },
+  {
+   "file": "site/data/problem-key.json",
+   "before": "f2ea2a9e58109923ad97830321576972a8a04310ff7de47c9ac17c722d2ebbc6",
+   "after": "9dda5daf99c54daa6fb0235aea21a49c8a8dafea922db101f51ff52e9c0799fb",
+   "date": "2026-11-20",
+   "step": "Review round 3",
+   "reason": "The old internal owner name for no-customer fixes renamed 'Teammate can fix'. No problem added, removed or moved.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "site/data/rules.json",
+   "before": "1c7ecbd04be91b1708f7316792789c7835db945977296ae818755af59d6c7313",
+   "after": "9de02b56a1d56d5bf6dfc6de78499fffc8673d76eb401ce45bf9a15a7d4ca432",
+   "date": "2026-11-20",
+   "step": "Review round 3",
+   "reason": "Owner name renamed; the phone rule moved into engine.js so any common phone format counts (the made-up phones all use one format, so no score moved); the pattern for finding a number in a note widened.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "site/data/checks.json",
+   "before": "269a20e4fc43456adf4e6f4b1efb155e7c821456a50461f1832d39f1e448ad3a",
+   "after": "d4f6bd13fd85ee61ab889a2d76b64f4b072cf80127406e09ec3d49a238b3b984",
+   "date": "2026-11-20",
+   "step": "Review round 3",
+   "reason": "Owner name renamed as above; the file was also re-indented.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "data/notes.json",
+   "before": "cc0dec49723b58a12c3a8181f33f1687b07e952aac09837b6d50b115b3207a1c",
+   "after": "48df1646f91d082855d287c5f3003f8615f81862ed1f972e0af00d30f6ffda05",
+   "date": "2026-11-20",
+   "step": "Review round 4",
+   "reason": "L006 and L041 still named a real payroll company in the note; it became the made-up Fernvale. Jev re-read both.",
+   "moved_score_toward_jev": false
+  },
+  {
+   "file": "site/data/leads.json",
+   "before": "1c5d6f6f43261384d01da59a776b23d336f7cddf0400fc3a17fe23788912339a",
+   "after": "46a560eae3a02735e383a612d10d6f600fcead0ecc6b6de72afcea684a80c6c4",
+   "date": "2026-11-20",
+   "step": "Review round 4",
+   "reason": "The same two note edits.",
+   "moved_score_toward_jev": false
+  }
+ ]
+}
