@@ -445,4 +445,32 @@ async function main() {
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#panel").hidden) closePanel(); trapTab(e); });
 }
 
-main().catch((e) => { document.body.prepend(el("p", { class: "wrap", text: `Could not load the day: ${e.message}` })); });
+// ---------- film mode (?film=1): the demo video is rendered frame by frame from this page ----------
+// film.js calls window.__app.apply(state) for every frame; the same state always draws the same page.
+function filmApply(s) {
+  const key = JSON.stringify({ tab: s.tab, open: s.open, fixed: s.fixed });
+  if (key !== state.filmKey) {
+    state.filmKey = key;
+    state.tab = s.tab;
+    state.showAll = false;
+    state.fixes = {}; state.clicks = {}; state.holds = {}; state.banner = null;
+    $("#panel").hidden = true; $("#scrim").hidden = true; state.open = null;
+    drawAll();
+    if (s.fixed) {
+      applyFix(D.day.results.find((x) => x.id === s.fixed.id), { phone: s.fixed.phone }, "You filled in the phone");
+      if (!s.open) { $("#panel").hidden = true; $("#scrim").hidden = true; state.open = null; }
+    } else if (s.open) {
+      openPanel(s.open);
+    }
+    document.activeElement && document.activeElement.blur && document.activeElement.blur();
+  }
+  const input = document.querySelector("#panel input[name=phone]");
+  if (input) input.value = s.typed || "";
+}
+
+main().then(() => {
+  if (/[?&]film=1/.test(location.search)) {
+    window.__app = { apply: filmApply };
+    import("./film.js");
+  }
+}).catch((e) => { document.body.prepend(el("p", { class: "wrap", text: `Could not load the day: ${e.message}` })); });

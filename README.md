@@ -34,6 +34,8 @@ Everything that decides is plain code: the checks, the lane, the owner, the orde
 
 Nothing runs on its own and nothing is sent. The day is made up, Jev's answers come from one saved run, and only a person closes a lead.
 
+The first-call steps are what the first conversation should settle, whether a person or a voice agent makes the call.
+
 ## How it works
 
 - **What Jev sees:** only the business name and what the person wrote. It never sees the form or the answer keys.
